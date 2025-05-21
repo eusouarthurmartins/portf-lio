@@ -1,274 +1,170 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oferta Especial - Opções Binárias</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oferta Especial</title>
   <style>
     body {
-      background: #0a0a0a;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .topo {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .topo h1 {
+      font-size: 2.5rem;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .topo p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .video-section {
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .video-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .video-card {
+      width: 300px;
+      background: #111;
+      border: 2px solid gold;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+    }
+
+    .video-card p {
+      margin: 10px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .produtos {
       padding: 40px 20px;
       text-align: center;
     }
 
-    h1 {
-      font-size: 2.4rem;
-      color: gold;
-      margin-bottom: 20px;
-    }
-
-    p.intro {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-      color: #ddd;
-    }
-
-    .verde {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #00ff88;
-      margin: 50px 0 20px;
-    }
-
-    .produtos {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      margin-bottom: 50px;
-      scroll-margin-top: 100px;
-    }
-
     .produto {
       background: #111;
-      padding: 30px 25px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px #ffd70055;
-      width: 300px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-
-    .produto:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px #ffd700cc;
-    }
-
-    .produto h3 {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .preco {
-      font-size: 1.5rem;
-      color: #00ff88;
-      margin: 10px 0 15px;
-    }
-
-    .produto button {
-      background: gold;
-      color: black;
-      border: none;
-      padding: 12px 28px;
-      font-size: 1rem;
+      border: 2px solid #0f0;
       border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-bottom: 20px;
-      font-weight: 700;
-      width: 100%;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
     }
 
-    .produto button:hover {
-      background: #fff;
-      color: #000;
+    .produto h2 {
+      color: #0f0;
     }
 
-    .descricao {
-      font-size: 1rem;
+    .produto p {
       color: #ccc;
-      text-align: center;
-      line-height: 1.5;
     }
 
-    /* Carrossel */
-    .carrossel-container {
-      position: relative;
-      overflow: hidden;
-      max-width: 100%;
-      margin: 0 auto 40px;
-    }
-
-    .carrossel {
-      display: flex;
-      gap: 20px;
-      transition: transform 0.5s ease-in-out;
-      padding: 20px 0;
-    }
-
-    .video {
-      min-width: 320px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px #000;
-      animation: pulse 2.5s infinite;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #00ff8855;
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #00ff88cc;
-      }
-    }
-
-    .seta {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      color: #00ff88;
-      background: rgba(0, 0, 0, 0.6);
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 2;
-      border-radius: 50%;
-    }
-
-    .seta:hover {
-      background: rgba(0, 0, 0, 0.9);
-    }
-
-    .esquerda {
-      left: 10px;
-    }
-
-    .direita {
-      right: 10px;
-    }
-
-    .btn-voltar {
-      background: #00ff88;
+    .produto a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background: #0f0;
       color: #000;
-      padding: 14px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .produto a:hover {
+      background: #0c0;
+    }
+
+    .botao-dourado {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 15px 30px;
+      background: gold;
+      color: #000;
       font-size: 1.2rem;
       font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.3s;
     }
 
-    .btn-voltar:hover {
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 960px) {
-      .produtos {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .produto {
-        width: 90%;
-        max-width: 400px;
-        margin-bottom: 30px;
-      }
+    .botao-dourado:hover {
+      background: #d4af37;
     }
   </style>
 </head>
 <body>
-  <h1>Que bom que você chegou até aqui.</h1>
-  <p class="intro">
-    Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você!<br/>
-    Segue abaixo alguns produtos que podem te ajudar no mercado.<br/>
-    Mas lembre-se, não há fórmula mágica. Tudo só depende de você.
-  </p>
 
-  <p class="verde">Você está a um clique da sua liberdade financeira!</p>
+  <section class="topo">
+    <h1>Oferta Especial</h1>
+    <p>Escolha agora seu produto com desconto exclusivo</p>
+  </section>
 
-  <div id="produtos" class="produtos">
-    <div class="produto">
-      <h3>🚀 MTI - Método Trader Inteligente</h3>
-      <div class="preco">R$ 97,00</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/S98634850D?off=zepj63xj&checkoutMode=10'">Quero esse Método</button>
-      <div class="descricao">
-        Curso completo com 8 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para iniciantes e intermediários.
+  <section class="video-section">
+    <div class="video-container">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+        <p>Curso MTI - Módulo 1</p>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
+        <p>Ebook para Iniciantes</p>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
+        <p>Código da Alavancagem</p>
       </div>
     </div>
+  </section>
+
+  <section class="produtos">
+    <div class="produto">
+      <h2>Curso MTI</h2>
+      <p>O método mais inteligente para aprender trading</p>
+      <a href="https://seulink.com/curso-mti">Comprar Agora</a>
+    </div>
 
     <div class="produto">
-      <h3>⚡ Código da Alavancagem</h3>
-      <div class="preco">R$ 47,00</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/ALAVANCAGEM_LINK'">Quero esse Código</button>
-      <div class="descricao">
-        Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
-      </div>
+      <h2>Ebook para Iniciantes</h2>
+      <p>Comece do zero com estratégias simples</p>
+      <a href="https://seulink.com/ebook-iniciantes">Comprar Agora</a>
     </div>
 
     <div class="produto">
-      <h3>📘 Ebook "Do Zero ao Trader"</h3>
-      <div class="preco">R$ 19,90</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/EBOOK_LINK'">Quero esse Ebook</button>
-      <div class="descricao">
-        Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
-      </div>
+      <h2>Código da Alavancagem</h2>
+      <p>Descubra como alavancar seu capital com segurança</p>
+      <a href="https://seulink.com/codigo-alavancagem">Comprar Agora</a>
     </div>
-  </div>
 
-  <p class="verde">Aqui estão algumas aulas que você vai encontrar:</p>
+    <a class="botao-dourado" href="https://seulink.com/escolher-produto">Escolher meu produto agora</a>
+  </section>
 
-  <div class="carrossel-container">
-    <button class="seta esquerda" onclick="moverCarrossel(-1)">❮</button>
-    <div id="carrossel" class="carrossel">
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_7" frameborder="0" allowfullscreen></iframe></div>
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_8" frameborder="0" allowfullscreen></iframe></div>
-    </div>
-    <button class="seta direita" onclick="moverCarrossel(1)">❯</button>
-  </div>
-
-  <p class="verde">Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.</p>
-
-  <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-    Escolher meu produto agora
-  </button>
-
-  <script>
-    let index = 0;
-    function moverCarrossel(direcao) {
-      const carrossel = document.getElementById('carrossel');
-      const total = carrossel.children.length;
-      const largura = carrossel.children[0].offsetWidth + 20;
-      index += direcao;
-
-      if (index < 0) index = total - 1;
-      if (index >= total) index = 0;
-
-      carrossel.style.transform = `translateX(-${index * largura}px)`;
-    }
-  </script>
 </body>
 </html>
