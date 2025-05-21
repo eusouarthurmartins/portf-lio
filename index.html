@@ -3,237 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upsell Trader</title>
+  <title>Vídeos Pulsando</title>
   <style>
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
+    h2 {
       text-align: center;
+      margin-top: 30px;
+      color: #00ffcc;
     }
 
-    h1 {
-      color: #0f0;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .green {
-      color: #00ff66;
-      font-weight: bold;
-      font-size: 1.6rem;
-    }
-
-    .produtos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin: 50px 0;
-    }
-
-    .produto {
-      background-color: #111;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 0 15px #444;
-      transition: transform 0.3s ease;
-    }
-
-    .produto:hover {
-      transform: scale(1.03);
-    }
-
-    .produto h2 {
-      font-size: 1.5rem;
-      margin: 10px 0;
-    }
-
-    .produto p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    .preco {
-      font-size: 1.4rem;
-      color: #0f0;
-      margin: 10px 0;
-    }
-
-    .botao {
-      background-color: #00ff66;
-      color: #000;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .botao:hover {
-      background-color: #00cc55;
-    }
-
-    .videos-section {
-      margin-top: 80px;
+    .carrossel-container {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      margin: 30px auto;
     }
 
     .carrossel {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      margin-top: 30px;
-    }
-
-    .videos {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 0.5s ease;
     }
 
     .video {
       min-width: 300px;
       margin: 0 10px;
-      border-radius: 12px;
-      overflow: hidden;
+      flex-shrink: 0;
       animation: pulse 2s infinite;
-      box-shadow: 0 0 20px rgba(0,255,100,0.4);
     }
 
     iframe {
       width: 100%;
-      height: 180px;
-      border: none;
+      height: 200px;
+      border-radius: 12px;
     }
 
-    .nav-btn {
+    .btn-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #00ff66;
-      color: #000;
+      background-color: #00ffcc;
       border: none;
       padding: 10px;
       cursor: pointer;
-      font-size: 1.5rem;
-      z-index: 1;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #00ff66;
+      z-index: 10;
     }
 
-    .nav-btn:hover {
-      background-color: #00cc55;
+    .btn-left {
+      left: 0;
     }
 
-    .nav-left {
-      left: 10px;
-    }
-
-    .nav-right {
-      right: 10px;
+    .btn-right {
+      right: 0;
     }
 
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
-    }
-
-    .btn-voltar {
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .produtos {
-        flex-direction: column;
-        align-items: center;
+      0% {
+        transform: scale(1);
       }
-
-      .video {
-        min-width: 90%;
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
       }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Que bom que você chegou até aqui.</h1>
-    <p>Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você! Segue abaixo alguns produtos que podem te ajudar no mercado. <strong>Mas lembre-se, não há fórmula mágica. Tudo só depende de você.</strong></p>
-    <p class="green">Você está a um clique da sua liberdade financeira!</p>
-
-    <div class="produtos" id="produtos">
-      <div class="produto">
-        <h2>MTI - Método Trader Inteligente</h2>
-        <p class="preco">R$ 197,00</p>
-        <button class="botao" onclick="location.href='https://seulink.com/MTI'">Comprar Agora</button>
-        <p>Curso completo que te ensina a operar com inteligência e consistência. Estratégias validadas, passo a passo prático.</p>
-      </div>
-      <div class="produto">
-        <h2>Código da Alavancagem</h2>
-        <p class="preco">R$ 97,00</p>
-        <button class="botao" onclick="location.href='https://seulink.com/CodigoAlavancagem'">Comprar Agora</button>
-        <p>Aprenda como alavancar sua banca com técnicas usadas pelos melhores traders do Brasil. Ideal para contas pequenas.</p>
-      </div>
-      <div class="produto">
-        <h2>Ebook "Do Zero ao Trader"</h2>
-        <p class="preco">R$ 27,00</p>
-        <button class="botao" onclick="location.href='https://seulink.com/EbookTrader'">Comprar Agora</button>
-        <p>Guia completo para iniciantes, com tudo que você precisa saber para começar do zero e alcançar os primeiros lucros.</p>
-      </div>
+  <h2>Aqui estão algumas aulas que você vai encontrar</h2>
+  <div class="carrossel-container">
+    <button class="btn-nav btn-left" onclick="scrollCarrossel(-1)">&#10094;</button>
+    <div class="carrossel" id="carrossel">
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe></div>
+      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID7" allowfullscreen></iframe></div>
     </div>
-
-    <div class="videos-section">
-      <p class="green">Aqui estão algumas aulas que você vai encontrar:</p>
-
-      <div class="carrossel">
-        <button class="nav-btn nav-left" onclick="scrollVideos(-1)">‹</button>
-        <div class="videos" id="videoContainer">
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe></div>
-          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID7" allowfullscreen></iframe></div>
-        </div>
-        <button class="nav-btn nav-right" onclick="scrollVideos(1)">›</button>
-      </div>
-
-      <p class="green">Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.</p>
-      <button class="botao btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">Ver Produtos Novamente</button>
-    </div>
+    <button class="btn-nav btn-right" onclick="scrollCarrossel(1)">&#10095;</button>
   </div>
 
   <script>
-    const container = document.getElementById('videoContainer');
-    const cardWidth = 320; // largura do vídeo + margem
-
+    const carrossel = document.getElementById('carrossel');
+    const videoWidth = 320; // 300px + margem
     let scrollIndex = 0;
-    const maxScroll = container.children.length - Math.floor(container.offsetWidth / cardWidth);
 
-    function scrollVideos(direction) {
+    function scrollCarrossel(direction) {
+      const visibleVideos = Math.floor(window.innerWidth / videoWidth);
+      const maxScroll = carrossel.children.length - visibleVideos;
       scrollIndex += direction;
       if (scrollIndex < 0) scrollIndex = 0;
       if (scrollIndex > maxScroll) scrollIndex = maxScroll;
-      container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+      carrossel.style.transform = `translateX(-${scrollIndex * videoWidth}px)`;
     }
   </script>
 </body>
