@@ -1,3 +1,112 @@
+<section class="banner">
+  <div class="banner-container">
+    <div class="banner-img">
+      <img src="assets/sua-imagem.png" alt="Sua Foto" />
+    </div>
+    <div class="banner-texto">
+      <h1>Método Trader Inteligente</h1>
+      <p>O caminho mais rápido para dominar as opções binárias com estratégia.</p>
+      <a href="#oferta" class="botao-banner">Quero Começar</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .banner {
+    background: url('assets/fundo-dourado.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    box-shadow: inset 0 0 100px #000;
+  }
+
+  .banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.95));
+    z-index: 0;
+  }
+
+  .banner-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .banner-img img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid gold;
+    box-shadow: 0 0 20px gold;
+    transition: transform 0.3s ease;
+  }
+
+  .banner-img img:hover {
+    transform: scale(1.1);
+  }
+
+  .banner-texto h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, gold, #e5b100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+
+  .banner-texto p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin: 10px 0 20px;
+  }
+
+  .botao-banner {
+    display: inline-block;
+    padding: 14px 30px;
+    background: gold;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ffd700;
+    transition: 0.3s;
+  }
+
+  .botao-banner:hover {
+    background: #fff8b0;
+    box-shadow: 0 0 20px gold;
+  }
+
+  @media (max-width: 600px) {
+    .banner-texto h1 {
+      font-size: 2.2rem;
+    }
+
+    .banner-texto p {
+      font-size: 1rem;
+    }
+
+    .banner-img img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+</style>
+
+
+-----------------------------------------------------------
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
