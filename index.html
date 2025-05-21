@@ -2,292 +2,220 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oferta especial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propostas Exclusivas</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      position: relative;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background: black;
       overflow-x: hidden;
-      background: linear-gradient(180deg, #000000 0%, #b8860b 100%);
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      pointer-events: none;
-      z-index: 0;
-      animation: moveBackground 30s linear infinite;
-      background-image: url('assets/fundotrader.jpg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 150% 150%;
-      filter: brightness(0.85);
-    }
-
-    @keyframes moveBackground {
-      0% { background-position: center top; }
-      50% { background-position: center center; }
-      100% { background-position: center top; }
-    }
-
-    .container {
-      position: relative;
-      background: rgba(26, 26, 26, 0.6);
-      backdrop-filter: blur(6px);
-      max-width: 800px;
-      margin: 60px auto;
-      padding: 30px 25px;
+    section {
+      padding: 60px 30px;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-      z-index: 1;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 2;
     }
 
     h1 {
-      color: #b8860b;
-      font-size: 2.2em;
+      font-size: 2.8rem;
+      color: gold;
       margin-bottom: 20px;
-      font-weight: 900;
     }
 
-    p, ul li {
-      font-size: 1em;
-      line-height: 1.5;
-      margin: 12px 0;
-    }
-
-    .highlight {
-      color: #ffdf7e;
-      font-weight: bold;
-    }
-
-    ul {
-      text-align: left;
-      padding-left: 25px;
-      margin-bottom: 30px;
-      list-style: none;
-    }
-
-    ul li::before {
-      content: "✅";
-      margin-right: 10px;
-      color: #ffdf7e;
-    }
-
-    .depoimentos {
-      background: linear-gradient(135deg, #000, #b8860b);
-      padding: 20px 18px;
-      border-radius: 10px;
-      margin: 30px 0;
-      text-align: left;
-      box-shadow: 0 0 10px #b8860b88;
-      color: #fff;
-    }
-
-    .depoimento {
-      font-style: italic;
+    h2 {
+      font-size: 2.2rem;
       margin-bottom: 15px;
-      font-size: 1em;
+      color: #ffd700;
     }
 
-    .depoimento strong {
-      display: block;
-      margin-top: 5px;
-      color: #ffdf7e;
-      font-weight: 700;
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.6;
     }
 
-    #countdown {
-      font-size: 1.6em;
-      color: #ffffff;
-      font-weight: 900;
-      margin: 20px 0 30px 0;
-      animation: blink 1s infinite;
+    .produtos {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 50px;
     }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    .produto {
+      background: #111;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ffd70055;
     }
 
-    .whatsapp-button {
-      display: inline-block;
-      background: #b8860b;
+    .produto h3 {
+      font-size: 1.8rem;
       color: #fff;
+    }
+
+    .preco {
+      font-size: 1.5rem;
+      color: #00ff88;
+      margin: 10px 0;
+    }
+
+    .produto button {
+      background: gold;
+      color: black;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .produto button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .descricao {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .garantia {
+      font-size: 2rem;
       font-weight: bold;
-      padding: 14px 35px;
-      border-radius: 8px;
-      font-size: 1.1em;
-      text-decoration: none;
-      margin: 10px 12px 0 12px;
-      box-shadow: 0 0 8px #b8860baa;
-      transition: background 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 60px;
+      color: #00ff88;
+      text-shadow: 0 0 10px #00ff88aa;
     }
 
-    .whatsapp-button:hover {
-      background: #d6af2b;
-      box-shadow: 0 0 15px #d6af2bcc;
-    }
-
-    canvas.fireworks {
+    /* Efeito de fundo animado */
+    .fundo-animado {
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 2;
-      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(#000, #111);
+      z-index: 0;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        margin: 30px 15px;
-        padding: 25px 15px;
-      }
-
-      h1 {
-        font-size: 1.7em;
-      }
-
-      p, ul li {
-        font-size: 0.9em;
-      }
-
-      #countdown {
-        font-size: 1.3em;
-      }
-
-      .whatsapp-button {
-        font-size: 1em;
-        padding: 12px 20px;
-      }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <canvas class="fireworks"></canvas>
 
-  <div class="container">
-    <h1>🎉 Parabéns por adquirir o Método Trader Inteligente!</h1>
+  <div class="fundo-animado"></div>
+  <canvas id="fireworks"></canvas>
 
-    <p><span class="highlight">QUE BOM QUE VOCÊ CHEGOU ATÉ AQUI!</span><br />
-    O <strong>MTI</strong> é um produto completo, que você vai entender tudo sobre o mercado de opções binárias!</p>
-
-    <p><span class="highlight">MAS TENHO QUE TE OFERECER UMA SUPER OFERTA...</span></p>
-
-    <p>Que tal você entender técnicas de <strong>alavancagens de bancas</strong> e virar um <strong>trader profissional</strong>, até mesmo terceirizando seus serviços?<br />
-    <strong>NÃO SAIA DESSA PÁGINA PARA NÃO PERDER ESSA OPORTUNIDADE!</strong></p>
-
-    <p>Com o <strong>Código da Alavancagem</strong>, você aprende a aplicar <span class="highlight">técnicas exclusivas</span> para multiplicar seu capital com inteligência e segurança, mesmo começando com pouco dinheiro.<br />
-    É a <strong>chave para acelerar seus resultados</strong> e sair do básico.</p>
-
-    <ul>
-      <li>Estratégias de alavancagem testadas</li>
-      <li>Ideal para contas pequenas</li>
-      <li>Passo a passo simples e direto</li>
-      <li>Transforme conhecimento em lucro</li>
-      <li>Suporte e acesso vitalício</li>
-    </ul>
-
-    <div class="depoimentos">
-      <div class="depoimento">“Com o Código da Alavancagem, consegui meus primeiros R$ 500 em uma semana!”<strong>– João T.</strong></div>
-      <div class="depoimento">“Aprendi a multiplicar minha banca com segurança. Valeu cada centavo.”<strong>– Marina R.</strong></div>
-      <div class="depoimento">“Hoje presto serviço como trader para pessoas. Comecei com esse código!”<strong>– Carlos M.</strong></div>
-    </div>
-
-    <div id="countdown">Oferta termina em: 10:00</div>
-
-    <a href="https://wa.me/+5522992568259" class="whatsapp-button">📲 Agende uma alavancagem comigo!</a>
-
-    <p style="color: #fff; font-size: 2em; font-weight: 900; margin-top: 20px;">
-      Oferta imperdível, por apenas R$ 99,99
+  <section>
+    <h1>Que bom que você chegou até aqui.</h1>
+    <p>
+      Se você quer se consolidar no mercado de opções binárias, tenho algumas propostas pra você! Abaixo estão produtos que podem transformar seu conhecimento e resultados.
+    </p>
+    <p>
+      Mas lembre-se: não existe fórmula mágica. Tudo só depende de você.
+    </p>
+    <p style="font-size: 1.5rem; color: #ffd700; margin-top: 30px;">
+      Você está a um clique da sua liberdade financeira!
     </p>
 
-    <div id="hotmart-sales-funnel" style="margin-top: 40px;"></div>
-  </div>
+    <div class="produtos">
+      <div class="produto">
+        <h3>🚀 MTI - Método Trader Inteligente</h3>
+        <div class="preco">R$ 97,00</div>
+        <button onclick="window.location.href='https://pay.hotmart.com/MTI_LINK'">Quero esse Método</button>
+        <div class="descricao">
+          Curso completo com 8 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para iniciantes e intermediários.
+        </div>
+      </div>
 
-  <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+      <div class="produto">
+        <h3>⚡ Código da Alavancagem</h3>
+        <div class="preco">R$ 47,00</div>
+        <button onclick="window.location.href='https://pay.hotmart.com/ALAVANCAGEM_LINK'">Quero esse Código</button>
+        <div class="descricao">
+          Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
+        </div>
+      </div>
+
+      <div class="produto">
+        <h3>📘 Ebook "Do Zero ao Trader"</h3>
+        <div class="preco">R$ 19,90</div>
+        <button onclick="window.location.href='https://pay.hotmart.com/EBOOK_LINK'">Quero esse Ebook</button>
+        <div class="descricao">
+          Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
+        </div>
+      </div>
+    </div>
+
+    <div class="garantia">
+      ✅ VOCÊ TEM 7 DIAS DE GARANTIA INCONDICIONAL! SE NÃO GOSTAR, É SÓ PEDIR O REEMBOLSO! ✅
+    </div>
+  </section>
+
   <script>
-    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-
-    let timeLeft = 10 * 60;
-    const countdownElement = document.getElementById('countdown');
-
-    function updateCountdown() {
-      const minutes = Math.floor(timeLeft / 60);
-      const seconds = timeLeft % 60;
-      countdownElement.textContent = `Oferta termina em: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-      if (timeLeft > 0) {
-        timeLeft--;
-        setTimeout(updateCountdown, 1000);
-      } else {
-        countdownElement.textContent = "Oferta encerrada!";
-      }
-    }
-
-    updateCountdown();
-  </script>
-
-  <script>
-    // Fogos de artifício simples com canvas
-    const canvas = document.querySelector('.fireworks');
+    const canvas = document.getElementById('fireworks');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+    let particles = [];
 
-    function Firework() {
-      this.x = random(100, canvas.width - 100);
-      this.y = canvas.height;
-      this.radius = 2;
-      this.color = `hsl(${random(0, 360)}, 100%, 60%)`;
-      this.speedY = random(-18, -12);
-      this.gravity = 0.4;
-      this.alpha = 1;
-    }
-
-    Firework.prototype.update = function () {
-      this.y += this.speedY;
-      this.speedY += this.gravity;
-      this.alpha -= 0.01;
-    };
-
-    Firework.prototype.draw = function () {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.globalAlpha = this.alpha;
-      ctx.fill();
-      ctx.globalAlpha = 1;
-    };
-
-    const fireworks = [];
-
-    function animateFireworks() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      if (Math.random() < 0.07) fireworks.push(new Firework());
-
-      for (let i = fireworks.length - 1; i >= 0; i--) {
-        fireworks[i].update();
-        fireworks[i].draw();
-        if (fireworks[i].alpha <= 0) {
-          fireworks.splice(i, 1);
-        }
+    function createParticle(x, y) {
+      const colors = ['#FFD700', '#FF4500', '#00FF88'];
+      for (let i = 0; i < 60; i++) {
+        particles.push({
+          x,
+          y,
+          radius: Math.random() * 2 + 1,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          speedX: (Math.random() - 0.5) * 5,
+          speedY: (Math.random() - 0.5) * 5,
+          alpha: 1
+        });
       }
-
-      requestAnimationFrame(animateFireworks);
     }
 
-    animateFireworks();
+    function animate() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      particles.forEach((p, index) => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        p.alpha -= 0.01;
+        if (p.alpha <= 0) particles.splice(index, 1);
+        else {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+      });
+      requestAnimationFrame(animate);
+    }
+
+    setInterval(() => {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height / 2;
+      createParticle(x, y);
+    }, 1000);
+
+    animate();
   </script>
 </body>
 </html>
