@@ -253,9 +253,9 @@
   <div class="garantia-texto">
     <h2>Garantia Incondicional de 7 Dias</h2>
     <p>
-      Ao se inscrever no <strong style="color:#00ff88;">Método Trader Inteligente</strong>, você tem <strong style="color:#00ff88;">7 dias completos</strong> para acessar o conteúdo, assistir às aulas e aplicar os ensinamentos.
+      Ao se inscrever no <strong>Método Trader Inteligente</strong>, você tem 7 dias completos para acessar o conteúdo, assistir às aulas e aplicar os ensinamentos.
       <br /><br />
-      Se por qualquer motivo você sentir que o curso não é para você, basta solicitar o reembolso dentro desse prazo — <strong style="color:#00ff88;">sem perguntas, sem burocracia</strong>. <strong style="color:#00ff88;">O risco é todo nosso!</strong>
+      Se por qualquer motivo você sentir que o curso não é para você, basta solicitar o reembolso dentro desse prazo — sem perguntas, sem burocracia. O risco é todo nosso!
     </p>
   </div>
 </section>
@@ -265,64 +265,54 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
-    color: #fff;
-    padding: 60px 30px;
-    gap: 40px;
+    background-color: #000000; /* Fundo igual da página */
+    color: #ffffff;
+    padding: 60px 40px;
+    gap: 50px;
     flex-wrap: wrap;
-    /* sombra suave verde em vez de roxa */
-    box-shadow: inset 60px 0 120px #00ff88cc, inset -60px 0 120px #00ff88cc;
   }
 
   .garantia-imagem {
     width: 180px;
-    animation: pulse 2s infinite;
+    max-width: 100%;
+    height: auto;
   }
 
   .garantia-texto {
     max-width: 600px;
-    text-align: left;
   }
 
   .garantia-texto h2 {
-    font-size: 2.5rem;
+    color: #00ff88; /* Verde que você gostou */
+    font-size: 2.8rem;
     margin-bottom: 20px;
-    color: #00ff88;
   }
 
   .garantia-texto p {
+    color: #ffffff; /* texto branco */
     font-size: 1.2rem;
     line-height: 1.6;
-  }
-
-  @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-      /* sombra verde pulsante */
-      filter: drop-shadow(0 0 6px #00ff88aa);
-    }
-    50% {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 14px #00ff88dd);
-    }
   }
 
   @media (max-width: 700px) {
     .garantia-section {
       flex-direction: column;
       text-align: center;
+      padding: 40px 20px;
+    }
+
+    .garantia-imagem {
+      width: 140px;
+      margin-bottom: 30px;
     }
 
     .garantia-texto h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     .garantia-texto p {
       font-size: 1rem;
     }
-
-    .garantia-imagem {
-      width: 140px;
-    }
   }
 </style>
+
