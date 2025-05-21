@@ -1,95 +1,39 @@
-<section class="banner-principal" id="banner-principal">
-  <div class="conteudo-banner">
-    <div class="banner-imagem">
-      <img src="assets/suafoto.png" alt="Foto do trader">
-    </div>
-    <div class="banner-texto">
-      <h1>
-        Os <span>Segredos dos milionários</span><br>
-        para lucrar 10x mais nesse mercado.
-      </h1>
-      <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-        Quero aprender
-      </button>
-    </div>
-  </div>
-</section>
-
-<style>
-  .banner-principal {
-    width: 100%;
-    padding: 60px 20px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .conteudo-banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .banner-imagem img {
-    width: 420px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .banner-texto {
-    flex: 1;
-    color: #fff;
-  }
-
-  .banner-texto h1 {
-    font-size: 2.8rem;
-    line-height: 1.3;
-    margin-bottom: 30px;
-    color: #fff;
-  }
-
-  .banner-texto h1 span {
-    color: #FFD700;
-    font-weight: bold;
-  }
-
-  .banner-texto button {
-    background-color: #FFD700;
-    color: #000;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-
-  .banner-texto button:hover {
-    background-color: #e6be00;
-  }
-
-  @media (max-width: 768px) {
-    .conteudo-banner {
-      flex-direction: column;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banner Simples</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    #banner {
+      padding: 40px 20px;
       text-align: center;
+      width: 100%;
+      max-width: 900px;
     }
-
-    .banner-texto h1 {
-      font-size: 2rem;
+    #banner img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ffd700aa;
     }
-
-    .banner-imagem img {
-      width: 300px;
-    }
-  }
-</style>
+  </style>
+</head>
+<body>
+  <section id="banner">
+    <img src="assets/suafoto.png" alt="Banner" />
+  </section>
+</body>
+</html>
 
 
 
