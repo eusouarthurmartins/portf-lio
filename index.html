@@ -1,96 +1,76 @@
-<section class="banner-hero">
-  <div class="hero-container">
-    <div class="hero-texto">
-      <h1>Os Segredos dos milionários<br>para lucrar <span>10x mais</span> nesse mercado.</h1>
-      <a href="#compra" class="btn-cta">Quero Aprender</a>
-    </div>
-    <div class="hero-imagem">
-      <img src="assets/banner-fundo.jpg" alt="Banner" />
-    </div>
+<section class="banner-lp" id="banner-principal">
+  <div class="conteudo-banner">
+    <h1><span class="destaque">Os Segredos dos milionários</span><br>para lucrar 10x mais nesse mercado.</h1>
+    <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
+      Quero aprender
+    </button>
   </div>
 </section>
 
 <style>
-  .banner-hero {
-    background: #000;
-    padding: 80px 20px;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  .hero-container {
+  .banner-lp {
+    background-image: url('assets/banner.jpg'); /* Troque pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1300px;
-    margin: auto;
-    gap: 40px;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 60px;
+    position: relative;
   }
 
-  .hero-texto {
-    flex: 1;
-    min-width: 320px;
+  .conteudo-banner {
+    max-width: 600px;
+    color: white;
+    z-index: 2;
   }
 
-  .hero-texto h1 {
-    font-size: 3rem;
+  .conteudo-banner h1 {
+    font-size: 2.8rem;
     line-height: 1.3;
     margin-bottom: 30px;
-    background: linear-gradient(to right, gold, #e5b100);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
   }
 
-  .hero-texto h1 span {
-    color: gold;
+  .conteudo-banner .destaque {
+    color: #FFD700;
     font-weight: bold;
   }
 
-  .btn-cta {
-    background: gold;
-    color: black;
-    padding: 15px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+  .conteudo-banner button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
     font-size: 1.1rem;
-    box-shadow: 0 0 15px #ffd700aa;
-    transition: 0.3s ease;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
   }
 
-  .btn-cta:hover {
-    background: #fff8b0;
-    box-shadow: 0 0 25px gold;
-  }
-
-  .hero-imagem {
-    flex: 1;
-    min-width: 300px;
-    text-align: right;
-  }
-
-  .hero-imagem img {
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #222;
+  .conteudo-banner button:hover {
+    background-color: #e6be00;
   }
 
   @media (max-width: 768px) {
-    .hero-container {
-      flex-direction: column;
+    .banner-lp {
+      padding: 30px;
+      justify-content: center;
       text-align: center;
     }
 
-    .hero-texto h1 {
-      font-size: 2.2rem;
+    .conteudo-banner h1 {
+      font-size: 2rem;
     }
 
-    .hero-imagem {
-      text-align: center;
+    .conteudo-banner {
+      max-width: 100%;
     }
   }
 </style>
+
 
 
 
