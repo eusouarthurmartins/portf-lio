@@ -14,13 +14,10 @@
       text-align: center;
     }
 
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-
     h1 {
       font-size: 2.4rem;
       color: gold;
+      margin-bottom: 20px;
     }
 
     p.intro {
@@ -32,9 +29,9 @@
     }
 
     .verde {
-      font-weight:700;
-      font-size:1.5rem;
-      color:#00ff88;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #00ff88;
       margin: 50px 0 20px;
     }
 
@@ -106,27 +103,27 @@
     }
 
     /* Carrossel */
-    .carrossel {
-      overflow-x: auto;
-      display: flex;
-      gap: 20px;
-      padding: 20px 0;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      margin-bottom: 40px;
+    .carrossel-container {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      margin: 0 auto 40px;
     }
 
-    .carrossel::-webkit-scrollbar {
-      display: none;
+    .carrossel {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease-in-out;
+      padding: 20px 0;
     }
 
     .video {
       min-width: 320px;
-      scroll-snap-align: start;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 10px #000;
       animation: pulse 2.5s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulse {
@@ -138,6 +135,32 @@
         transform: scale(1.05);
         box-shadow: 0 0 25px #00ff88cc;
       }
+    }
+
+    .seta {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #00ff88;
+      background: rgba(0, 0, 0, 0.6);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 2;
+      border-radius: 50%;
+    }
+
+    .seta:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .esquerda {
+      left: 10px;
+    }
+
+    .direita {
+      right: 10px;
     }
 
     .btn-voltar {
@@ -212,25 +235,19 @@
 
   <p class="verde">Aqui estão algumas aulas que você vai encontrar:</p>
 
-  <div class="carrossel">
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+  <div class="carrossel-container">
+    <button class="seta esquerda" onclick="moverCarrossel(-1)">❮</button>
+    <div id="carrossel" class="carrossel">
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_7" frameborder="0" allowfullscreen></iframe></div>
+      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_8" frameborder="0" allowfullscreen></iframe></div>
     </div>
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="video">
-      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <button class="seta direita" onclick="moverCarrossel(1)">❯</button>
   </div>
 
   <p class="verde">Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.</p>
@@ -238,5 +255,20 @@
   <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
     Escolher meu produto agora
   </button>
+
+  <script>
+    let index = 0;
+    function moverCarrossel(direcao) {
+      const carrossel = document.getElementById('carrossel');
+      const total = carrossel.children.length;
+      const largura = carrossel.children[0].offsetWidth + 20;
+      index += direcao;
+
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+
+      carrossel.style.transform = `translateX(-${index * largura}px)`;
+    }
+  </script>
 </body>
 </html>
