@@ -253,6 +253,9 @@
 
 
 <section class="garantia">
+  <div class="garantia-imagem">
+    <img src="https://i.imgur.com/4YcX9Vz.png" alt="Garantia 7 dias" />
+  </div>
   <div class="garantia-texto">
     <h2>Garantia de 7 dias</h2>
     <p>
@@ -260,20 +263,32 @@
       Aproveite com segurança e comece a transformar suas operações hoje mesmo!
     </p>
   </div>
-  <div class="garantia-imagem">
-    <img src="https://i.imgur.com/4YcX9Vz.png" alt="Garantia 7 dias" />
-  </div>
 </section>
 
 <style>
   .garantia {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 40px;
     background: #0a0a0a;
     padding: 50px 20px;
     color: white;
+    justify-content: center;
+  }
+
+  .garantia-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .garantia-imagem img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #d4af37cc;
+    animation: pulse 2.5s infinite;
   }
 
   .garantia-texto {
@@ -292,18 +307,19 @@
     line-height: 1.6;
   }
 
-  .garantia-imagem {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .garantia-imagem img {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #d4af37cc;
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #d4af37cc;
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #d4af37ff;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #d4af37cc;
+    }
   }
 
   @media (max-width: 768px) {
@@ -312,11 +328,9 @@
       text-align: center;
     }
     .garantia-imagem {
-      margin-top: 30px;
+      margin-bottom: 30px;
     }
   }
 </style>
-
-
 
 
