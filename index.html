@@ -6,7 +6,8 @@
   <title>Oferta Especial - Opções Binárias</title>
   <style>
     body {
-      background: #0a0a0a;
+      background: url('URL_DA_SUA_IMAGEM_DE_FUNDO.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #eee;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -14,6 +15,7 @@
       text-align: center;
     }
 
+    /* resto do CSS sem alteração */
     h1 {
       font-size: 2.4rem;
       color: gold;
@@ -102,7 +104,6 @@
       line-height: 1.5;
     }
 
-    /* Carrossel simplificado sem scroll e setas */
     .carrossel-container {
       max-width: 100%;
       margin: 0 auto 40px;
@@ -138,7 +139,7 @@
     }
 
     .btn-voltar {
-      background: gold; /* dourado igual aos botões */
+      background: gold;
       color: black;
       padding: 14px 30px;
       font-size: 1.2rem;
@@ -209,7 +210,7 @@
     <div class="produto">
       <h3>⚡ Código da Alavancagem</h3>
       <div class="preco">R$ 47,00</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/ALAVANCAGEM_LINK'">Quero esse Código</button>
+      <button onclick="window.location.href='https://pay.hotmart.com/SEU_LINK_DE_ALAVANCAGEM_AQUI'">Quero esse Código</button>
       <div class="descricao">
         Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
       </div>
@@ -218,7 +219,7 @@
     <div class="produto">
       <h3>📘 Ebook "Do Zero ao Trader"</h3>
       <div class="preco">R$ 19,90</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/EBOOK_LINK'">Quero esse Ebook</button>
+      <button onclick="window.location.href='https://pay.hotmart.com/SEU_LINK_DO_EBOOK_AQUI'">Quero esse Ebook</button>
       <div class="descricao">
         Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
       </div>
@@ -243,70 +244,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-<section class="garantia-centralizada">
-  <div class="imagem-pulsante">
-    <img src="https://i.imgur.com/4YcX9Vz.png" alt="Garantia 7 dias" />
-  </div>
-  <h2>Garantia de 7 dias</h2>
-  <p>
-    Se você não ficar satisfeito com o curso, devolvemos seu dinheiro integralmente, sem burocracia.
-    Aproveite com segurança e comece a transformar suas operações hoje mesmo!
-  </p>
-</section>
-
-<style>
-  .garantia-centralizada {
-    background: #0a0a0a;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    max-width: 450px;
-    margin: 0 auto;
-  }
-
-  .imagem-pulsante img {
-    max-width: 220px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #d4af37cc;
-    animation: pulse 2.5s infinite;
-    margin-bottom: 25px;
-  }
-
-  h2 {
-    color: #d4af37;
-    font-size: 2.6rem;
-    margin-bottom: 15px;
-  }
-
-  p {
-    color: #fff;
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-    50% {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #d4af37ff;
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-  }
-</style>
-
