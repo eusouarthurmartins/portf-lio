@@ -622,73 +622,60 @@
 
 -----------------------------------
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meu Projeto</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(120deg, #000000, #1a1a1a);
-      color: #fff;
-    }
+<!-- Botão Flutuante do WhatsApp no CANTO SUPERIOR DIREITO, SEM INTERFERIR NO FUNDO -->
+<a href="https://wa.me/5511999999999" 
+   class="btn-whatsapp" 
+   target="_blank" 
+   aria-label="Fale conosco no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 256 256">
+    <rect width="256" height="256" fill="none"/>
+    <path d="M128,24A104,104,0,0,0,40.2,176.4l-7.9,28.7a8,8,0,0,0,9.8,9.8l28.7-7.9A104,104,0,1,0,128,24Zm0,192a88,88,0,0,1-44.7-12.1,8,8,0,0,0-4-1.1,8.1,8.1,0,0,0-2.1.3l-22.6,6.2 6.2-22.6a8.1,8.1,0,0,0-.8-6.1A87.8,87.8,0,1,1,128,216Zm45.7-59.6-17.8-7.8a8,8,0,0,0-7.5.6l-9.1,6.1a61.8,61.8,0,0,1-29.5-29.5l6.1-9.1a8.1,8.1,0,0,0,.6-7.5l-7.8-17.8a8,8,0,0,0-10.2-4.2l-12.2,4.9a8,8,0,0,0-5,6.7c-1.1,10.6,1.5,29.3,27.4,55.2s44.6,28.5,55.2,27.4a8,8,0,0,0,6.7-5l4.9-12.2A8,8,0,0,0,173.7,156.4Z"/>
+  </svg>
+</a>
 
-    h1 {
-      text-align: center;
-      margin-top: 100px;
-      color: #FFD700;
-    }
+<style>
+  .btn-whatsapp {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #FFD700;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+  }
 
-    p {
-      text-align: center;
-      font-size: 1.2rem;
-      color: #fff;
-    }
+  .btn-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  }
 
-    /* Botão Flutuante do WhatsApp */
+  .btn-whatsapp svg {
+    width: 28px;
+    height: 28px;
+    fill: #000;
+  }
+
+  @media (max-width: 600px) {
     .btn-whatsapp {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-      background-color: #FFD700;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      top: 15px;
+      right: 15px;
     }
 
-    .btn-whatsapp:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    .btn-whatsapp svg {
+      width: 24px;
+      height: 24px;
     }
-  </style>
-</head>
-<body>
-
-  <h1>Bem-vindo ao meu projeto</h1>
-  <p>Esse site está hospedado com GitHub Pages e tem um botão flutuante do WhatsApp.</p>
-
-  <!-- Botão Flutuante do WhatsApp -->
-  <a href="https://wa.me/5599999999999" class="btn-whatsapp" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 256 256">
-      <rect width="256" height="256" fill="none"/>
-      <path d="M128,24A104,104,0,0,0,40.2,176.4l-7.9,28.7a8,8,0,0,0,9.8,9.8l28.7-7.9A104,104,0,1,0,128,24Zm0,192a88,88,0,0,1-44.7-12.1,8,8,0,0,0-4-1.1,8.1,8.1,0,0,0-2.1.3l-22.6,6.2,6.2-22.6a8.1,8.1,0,0,0-.8-6.1A87.8,87.8,0,1,1,128,216Zm45.7-59.6-17.8-7.8a8,8,0,0,0-7.5.6l-9.1,6.1a61.8,61.8,0,0,1-29.5-29.5l6.1-9.1a8.1,8.1,0,0,0,.6-7.5l-7.8-17.8a8,8,0,0,0-10.2-4.2l-12.2,4.9a8,8,0,0,0-5,6.7c-1.1,10.6,1.5,29.3,27.4,55.2s44.6,28.5,55.2,27.4a8,8,0,0,0,6.7-5l4.9-12.2A8,8,0,0,0,173.7,156.4Z"/>
-    </svg>
-  </a>
-
-</body>
-</html>
-
+  }
+</style>
 
 
 
