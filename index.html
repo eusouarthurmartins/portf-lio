@@ -1,165 +1,293 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Thurzin Trader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta especial</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #0b0b0b;
-      color: #fff8e1;
-      scroll-behavior: smooth;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #222;
+      position: relative;
+      overflow-x: hidden;
+      background: linear-gradient(180deg, #000000 0%, #b8860b 100%);
     }
 
-    header {
-      background-color: #000;
-      padding: 40px 20px;
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      animation: moveBackground 30s linear infinite;
+      background-image: url('assets/fundotrader.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 150% 150%;
+      filter: brightness(0.85);
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: center top; }
+      50% { background-position: center center; }
+      100% { background-position: center top; }
+    }
+
+    .container {
+      position: relative;
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(6px);
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px 25px;
       text-align: center;
-      border-bottom: 2px solid gold;
-    }
-
-    header h1 {
-      font-size: 3.2rem;
-      color: gold;
-      text-shadow: 0 0 10px gold;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #fff8e1;
-    }
-
-    .btn-whatsapp {
-      background-color: gold;
-      color: #000;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px gold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .produto {
-      background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
-      margin-bottom: 40px;
       border-radius: 12px;
-      padding: 30px;
-      border: 2px solid gold;
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
     }
 
-    .produto h2 {
-      color: gold;
-      font-size: 2rem;
+    h1 {
+      color: #b8860b;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      font-weight: 900;
     }
 
-    .produto p {
-      margin-top: 10px;
-      font-size: 1rem;
-      color: #fff8e1;
+    p, ul li {
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 12px 0;
     }
 
-    .produto img {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin: 20px 0;
-      border: 2px solid gold;
-    }
-
-    .btn-produto {
-      background-color: gold;
-      color: #000;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
+    .highlight {
+      color: #ffdf7e;
       font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 0 10px gold;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 25px;
+      margin-bottom: 30px;
+      list-style: none;
+    }
+
+    ul li::before {
+      content: "✅";
+      margin-right: 10px;
+      color: #ffdf7e;
     }
 
     .depoimentos {
-      background-color: #1a1a1a;
-      border-left: 5px solid gold;
-      padding: 20px;
+      background: linear-gradient(135deg, #000, #b8860b);
+      padding: 20px 18px;
       border-radius: 10px;
-      margin-bottom: 20px;
-      color: #fff8e1;
+      margin: 30px 0;
+      text-align: left;
+      box-shadow: 0 0 10px #b8860b88;
+      color: #fff;
     }
 
-    h2.section-title {
-      text-align: center;
-      color: gold;
-      text-shadow: 0 0 5px gold;
+    .depoimento {
+      font-style: italic;
+      margin-bottom: 15px;
+      font-size: 1em;
     }
 
-    footer {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      border-top: 2px solid gold;
+    .depoimento strong {
+      display: block;
+      margin-top: 5px;
+      color: #ffdf7e;
+      font-weight: 700;
+    }
+
+    #countdown {
+      font-size: 1.6em;
+      color: #ffffff;
+      font-weight: 900;
+      margin: 20px 0 30px 0;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      background: #b8860b;
+      color: #fff;
+      font-weight: bold;
+      padding: 14px 35px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      text-decoration: none;
+      margin: 10px 12px 0 12px;
+      box-shadow: 0 0 8px #b8860baa;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      background: #d6af2b;
+      box-shadow: 0 0 15px #d6af2bcc;
+    }
+
+    canvas.fireworks {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px 15px;
+        padding: 25px 15px;
+      }
+
+      h1 {
+        font-size: 1.7em;
+      }
+
+      p, ul li {
+        font-size: 0.9em;
+      }
+
+      #countdown {
+        font-size: 1.3em;
+      }
+
+      .whatsapp-button {
+        font-size: 1em;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Thurzin Trader</h1>
-    <p>Transformando iniciantes em traders lucrativos!</p>
-    <a class="btn-whatsapp" href="https://wa.me/seunumero" target="_blank">Fale comigo no WhatsApp</a>
-  </header>
+  <canvas class="fireworks"></canvas>
 
-  <section>
-    <div class="produto">
-      <h2>📈 MTI - Método Trader Inteligente</h2>
-      <img src="assets/mti-capa.jpg" alt="Capa do MTI">
-      <p>Aprenda a operar de forma inteligente com o método que já formou centenas de traders!</p>
-      <a class="btn-produto" href="https://seulinkmti" target="_blank">Ver mais</a>
-    </div>
+  <div class="container">
+    <h1>🎉 Parabéns por adquirir o Método Trader Inteligente!</h1>
 
-    <div class="produto">
-      <h2>🚀 Código da Alavancagem</h2>
-      <img src="assets/codigo-alavancagem.jpg" alt="Código da Alavancagem">
-      <p>O passo a passo para você alavancar sua banca com segurança e técnica.</p>
-      <a class="btn-produto" href="https://seulinkcodigo" target="_blank">Quero Alavancar</a>
-    </div>
+    <p><span class="highlight">QUE BOM QUE VOCÊ CHEGOU ATÉ AQUI!</span><br />
+    O <strong>MTI</strong> é um produto completo, que você vai entender tudo sobre o mercado de opções binárias!</p>
 
-    <div class="produto">
-      <h2>📘 eBook - Do Zero ao Trader</h2>
-      <img src="assets/ebook-zero-ao-trader.jpg" alt="eBook Do Zero ao Trader">
-      <p>Ideal para iniciantes! Aprenda o básico para dar seus primeiros passos no mercado de opções.</p>
-      <a class="btn-produto" href="https://seulinkebook" target="_blank">Baixar Agora</a>
-    </div>
-  </section>
+    <p><span class="highlight">MAS TENHO QUE TE OFERECER UMA SUPER OFERTA...</span></p>
 
-  <section>
-    <h2 class="section-title">📢 Depoimentos</h2>
+    <p>Que tal você entender técnicas de <strong>alavancagens de bancas</strong> e virar um <strong>trader profissional</strong>, até mesmo terceirizando seus serviços?<br />
+    <strong>NÃO SAIA DESSA PÁGINA PARA NÃO PERDER ESSA OPORTUNIDADE!</strong></p>
+
+    <p>Com o <strong>Código da Alavancagem</strong>, você aprende a aplicar <span class="highlight">técnicas exclusivas</span> para multiplicar seu capital com inteligência e segurança, mesmo começando com pouco dinheiro.<br />
+    É a <strong>chave para acelerar seus resultados</strong> e sair do básico.</p>
+
+    <ul>
+      <li>Estratégias de alavancagem testadas</li>
+      <li>Ideal para contas pequenas</li>
+      <li>Passo a passo simples e direto</li>
+      <li>Transforme conhecimento em lucro</li>
+      <li>Suporte e acesso vitalício</li>
+    </ul>
+
     <div class="depoimentos">
-      <p>"O MTI mudou completamente minha forma de operar. Obrigado, Thurzin!" – João V.</p>
+      <div class="depoimento">“Com o Código da Alavancagem, consegui meus primeiros R$ 500 em uma semana!”<strong>– João T.</strong></div>
+      <div class="depoimento">“Aprendi a multiplicar minha banca com segurança. Valeu cada centavo.”<strong>– Marina R.</strong></div>
+      <div class="depoimento">“Hoje presto serviço como trader para pessoas. Comecei com esse código!”<strong>– Carlos M.</strong></div>
     </div>
-    <div class="depoimentos">
-      <p>"Com o Código da Alavancagem consegui dobrar minha banca em 3 semanas!" – Fernanda M.</p>
-    </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 Thurzin Trader. Todos os direitos reservados.</p>
-  </footer>
+    <div id="countdown">Oferta termina em: 10:00</div>
+
+    <a href="https://wa.me/+5522992568259" class="whatsapp-button">📲 Agende uma alavancagem comigo!</a>
+
+    <p style="color: #fff; font-size: 2em; font-weight: 900; margin-top: 20px;">
+      Oferta imperdível, por apenas R$ 99,99
+    </p>
+
+    <div id="hotmart-sales-funnel" style="margin-top: 40px;"></div>
+  </div>
+
+  <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+  <script>
+    checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+
+    let timeLeft = 10 * 60;
+    const countdownElement = document.getElementById('countdown');
+
+    function updateCountdown() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      countdownElement.textContent = `Oferta termina em: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      if (timeLeft > 0) {
+        timeLeft--;
+        setTimeout(updateCountdown, 1000);
+      } else {
+        countdownElement.textContent = "Oferta encerrada!";
+      }
+    }
+
+    updateCountdown();
+  </script>
+
+  <script>
+    // Fogos de artifício simples com canvas
+    const canvas = document.querySelector('.fireworks');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function Firework() {
+      this.x = random(100, canvas.width - 100);
+      this.y = canvas.height;
+      this.radius = 2;
+      this.color = `hsl(${random(0, 360)}, 100%, 60%)`;
+      this.speedY = random(-18, -12);
+      this.gravity = 0.4;
+      this.alpha = 1;
+    }
+
+    Firework.prototype.update = function () {
+      this.y += this.speedY;
+      this.speedY += this.gravity;
+      this.alpha -= 0.01;
+    };
+
+    Firework.prototype.draw = function () {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.globalAlpha = this.alpha;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+    };
+
+    const fireworks = [];
+
+    function animateFireworks() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (Math.random() < 0.07) fireworks.push(new Firework());
+
+      for (let i = fireworks.length - 1; i >= 0; i--) {
+        fireworks[i].update();
+        fireworks[i].draw();
+        if (fireworks[i].alpha <= 0) {
+          fireworks.splice(i, 1);
+        }
+      }
+
+      requestAnimationFrame(animateFireworks);
+    }
+
+    animateFireworks();
+  </script>
 </body>
 </html>
