@@ -1,4 +1,5 @@
 <section class="banner-lp" id="banner-principal">
+  <div class="overlay-banner"></div>
   <div class="conteudo-banner">
     <h1><span class="destaque">Os Segredos dos milionários</span><br>para lucrar 10x mais nesse mercado.</h1>
     <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
@@ -8,22 +9,42 @@
 </section>
 
 <style>
+  /* Zera margens/paddings globais */
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
   .banner-lp {
-    background-image: url('assets/banner.jpg'); /* Troque pelo caminho da sua imagem */
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/banner.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center;
-    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 60px;
-    position: relative;
+    padding-left: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .overlay-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* camada escura para contraste */
+    z-index: 1;
   }
 
   .conteudo-banner {
+    position: relative;
+    z-index: 2;
     max-width: 600px;
     color: white;
-    z-index: 2;
   }
 
   .conteudo-banner h1 {
@@ -56,17 +77,13 @@
 
   @media (max-width: 768px) {
     .banner-lp {
-      padding: 30px;
       justify-content: center;
+      padding: 20px;
       text-align: center;
     }
 
     .conteudo-banner h1 {
       font-size: 2rem;
-    }
-
-    .conteudo-banner {
-      max-width: 100%;
     }
   }
 </style>
