@@ -249,7 +249,84 @@
 
 --------------------------------------------
 
+<section class="garantia-horizontal">
+  <div class="imagem">
+    <img src="garantia1.png" alt="Garantia 7 dias" />
+  </div>
+  <div class="texto">
+    <h2>Garantia de 7 dias</h2>
+    <p>
+     Lembrando que todos os nossos produtos tem garantia de 7 dias. Então se você não gostar ou por outro motivo desistir, só entrar em contato, pedir reembolso que eu ou minha equipe devolveremos 100% do seu dinheiro!
+    </p>
+  </div>
+</section>
 
+<style>
+  .garantia-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .garantia-horizontal .imagem img {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #d4af37cc;
+    animation: pulse 2.5s infinite;
+  }
+
+  .garantia-horizontal .texto {
+    max-width: 500px;
+  }
+
+  .garantia-horizontal h2 {
+    color: #d4af37;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .garantia-horizontal p {
+    color: #fff;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #d4af37cc;
+    }
+    50% {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px #d4af37ff;
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px #d4af37cc;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .garantia-horizontal {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .garantia-horizontal .texto {
+      max-width: 100%;
+    }
+
+    .garantia-horizontal h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
 
 
 
@@ -341,83 +418,6 @@
 
 
 
-<section class="garantia-horizontal">
-  <div class="imagem">
-    <img src="garantia1.png" alt="Garantia 7 dias" />
-  </div>
-  <div class="texto">
-    <h2>Garantia de 7 dias</h2>
-    <p>
-     Lembrando que todos os nossos produtos tem garantia de 7 dias. Então se você não gostar ou por outro motivo desistir, só entrar em contato, pedir reembolso que eu ou minha equipe devolveremos 100% do seu dinheiro!
-    </p>
-  </div>
-</section>
 
-<style>
-  .garantia-horizontal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-
-  .garantia-horizontal .imagem img {
-    max-width: 200px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #d4af37cc;
-    animation: pulse 2.5s infinite;
-  }
-
-  .garantia-horizontal .texto {
-    max-width: 500px;
-  }
-
-  .garantia-horizontal h2 {
-    color: #d4af37;
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-  }
-
-  .garantia-horizontal p {
-    color: #fff;
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-    50% {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #d4af37ff;
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .garantia-horizontal {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .garantia-horizontal .texto {
-      max-width: 100%;
-    }
-
-    .garantia-horizontal h2 {
-      font-size: 2rem;
-    }
-  }
-</style>
 
 
