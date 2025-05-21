@@ -1,67 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Propostas Exclusivas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oferta Especial - Opções Binárias</title>
   <style>
     body {
+      background: #0a0a0a;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: white;
-      background: black;
-      overflow-x: hidden;
-    }
-
-    section {
-      padding: 60px 30px;
+      padding: 40px 20px;
       text-align: center;
-      position: relative;
-      z-index: 2;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      color: gold;
+    h1, h2 {
       margin-bottom: 20px;
     }
 
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      color: #ffd700;
+    h1 {
+      font-size: 2.4rem;
+      color: gold;
     }
 
-    p {
-      font-size: 1.2rem;
+    p.intro {
+      font-size: 1.3rem;
       max-width: 700px;
-      margin: 10px auto;
+      margin: 0 auto 40px;
       line-height: 1.6;
+      color: #ddd;
+    }
+
+    p.impacto {
+      font-size: 2rem;
+      font-weight: 900;
+      color: gold;
+      margin-top: 80px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 0 10px #ffd700aa;
     }
 
     .produtos {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
-      margin-top: 50px;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .produto {
       background: #111;
-      padding: 30px;
+      padding: 30px 25px;
       border-radius: 20px;
       box-shadow: 0 0 15px #ffd70055;
+      width: 300px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #ffd700cc;
     }
 
     .produto h3 {
       font-size: 1.8rem;
       color: #fff;
+      margin-bottom: 10px;
+      text-align: center;
     }
 
     .preco {
       font-size: 1.5rem;
       color: #00ff88;
-      margin: 10px 0;
+      margin: 10px 0 15px;
     }
 
     .produto button {
@@ -72,8 +90,10 @@
       font-size: 1rem;
       border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
-      margin-top: 10px;
+      transition: background-color 0.3s;
+      margin-bottom: 20px;
+      font-weight: 700;
+      width: 100%;
     }
 
     .produto button:hover {
@@ -82,140 +102,72 @@
     }
 
     .descricao {
-      margin-top: 15px;
       font-size: 1rem;
       color: #ccc;
+      text-align: center;
+      line-height: 1.5;
     }
 
-    .garantia {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 60px;
-      color: #00ff88;
-      text-shadow: 0 0 10px #00ff88aa;
-    }
+    /* responsividade */
+    @media (max-width: 960px) {
+      .produtos {
+        flex-direction: column;
+        align-items: center;
+      }
 
-    /* Efeito de fundo animado */
-    .fundo-animado {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(#000, #111);
-      z-index: 0;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      pointer-events: none;
+      .produto {
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 30px;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>Que bom que você chegou até aqui.</h1>
+  <p class="intro">
+    Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você!<br/>
+    Segue abaixo alguns produtos que podem te ajudar no mercado.<br/>
+    Mas lembre-se, não há fórmula mágica. Tudo só depende de você.
+  </p>
 
-  <div class="fundo-animado"></div>
-  <canvas id="fireworks"></canvas>
+  <p class="intro" style="font-weight:700; font-size:1.5rem; color:#00ff88;">
+    Você está a um clique da sua liberdade financeira!
+  </p>
 
-  <section>
-    <h1>Que bom que você chegou até aqui.</h1>
-    <p>
-      Se você quer se consolidar no mercado de opções binárias, tenho algumas propostas pra você! Abaixo estão produtos que podem transformar seu conhecimento e resultados.
-    </p>
-    <p>
-      Mas lembre-se: não existe fórmula mágica. Tudo só depende de você.
-    </p>
-    <p style="font-size: 1.5rem; color: #ffd700; margin-top: 30px;">
-      Você está a um clique da sua liberdade financeira!
-    </p>
-
-    <div class="produtos">
-      <div class="produto">
-        <h3>🚀 MTI - Método Trader Inteligente</h3>
-        <div class="preco">R$ 97,00</div>
-        <button onclick="window.location.href='https://pay.hotmart.com/MTI_LINK'">Quero esse Método</button>
-        <div class="descricao">
-          Curso completo com 8 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para iniciantes e intermediários.
-        </div>
-      </div>
-
-      <div class="produto">
-        <h3>⚡ Código da Alavancagem</h3>
-        <div class="preco">R$ 47,00</div>
-        <button onclick="window.location.href='https://pay.hotmart.com/ALAVANCAGEM_LINK'">Quero esse Código</button>
-        <div class="descricao">
-          Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
-        </div>
-      </div>
-
-      <div class="produto">
-        <h3>📘 Ebook "Do Zero ao Trader"</h3>
-        <div class="preco">R$ 19,90</div>
-        <button onclick="window.location.href='https://pay.hotmart.com/EBOOK_LINK'">Quero esse Ebook</button>
-        <div class="descricao">
-          Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
-        </div>
+  <div class="produtos">
+    <div class="produto">
+      <h3>🚀 MTI - Método Trader Inteligente</h3>
+      <div class="preco">R$ 97,00</div>
+      <button onclick="window.location.href='https://pay.hotmart.com/S98634850D?off=zepj63xj&checkoutMode=10'">Quero esse Método</button>
+      <div class="descricao">
+        Curso completo com 8 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para iniciantes e intermediários.
       </div>
     </div>
 
-    <div class="garantia">
-      ✅ VOCÊ TEM 7 DIAS DE GARANTIA INCONDICIONAL! SE NÃO GOSTAR, É SÓ PEDIR O REEMBOLSO! ✅
+    <div class="produto">
+      <h3>⚡ Código da Alavancagem</h3>
+      <div class="preco">R$ 47,00</div>
+      <button onclick="window.location.href='https://pay.hotmart.com/ALAVANCAGEM_LINK'">Quero esse Código</button>
+      <div class="descricao">
+        Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
+      </div>
     </div>
-  </section>
 
-  <script>
-    const canvas = document.getElementById('fireworks');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    <div class="produto">
+      <h3>📘 Ebook "Do Zero ao Trader"</h3>
+      <div class="preco">R$ 19,90</div>
+      <button onclick="window.location.href='https://pay.hotmart.com/EBOOK_LINK'">Quero esse Ebook</button>
+      <div class="descricao">
+        Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
+      </div>
+    </div>
+  </div>
 
-    let particles = [];
-
-    function createParticle(x, y) {
-      const colors = ['#FFD700', '#FF4500', '#00FF88'];
-      for (let i = 0; i < 60; i++) {
-        particles.push({
-          x,
-          y,
-          radius: Math.random() * 2 + 1,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          speedX: (Math.random() - 0.5) * 5,
-          speedY: (Math.random() - 0.5) * 5,
-          alpha: 1
-        });
-      }
-    }
-
-    function animate() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((p, index) => {
-        p.x += p.speedX;
-        p.y += p.speedY;
-        p.alpha -= 0.01;
-        if (p.alpha <= 0) particles.splice(index, 1);
-        else {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
-          ctx.fillStyle = p.color;
-          ctx.globalAlpha = p.alpha;
-          ctx.fill();
-          ctx.globalAlpha = 1;
-        }
-      });
-      requestAnimationFrame(animate);
-    }
-
-    setInterval(() => {
-      const x = Math.random() * canvas.width;
-      const y = Math.random() * canvas.height / 2;
-      createParticle(x, y);
-    }, 1000);
-
-    animate();
-  </script>
+  <p class="impacto">
+    GARANTIA DE 7 DIAS:  
+    Se por qualquer motivo você não ficar satisfeito, devolvemos TODO o seu dinheiro, sem burocracia.  
+    Sua segurança e satisfação são nossa prioridade!
+  </p>
 </body>
 </html>
