@@ -1,6 +1,9 @@
 <section class="sessao-intro" id="sessao-intro">
   <div class="conteudo-intro">
-    <img src="assets/suafoto.png" alt="Sua foto" class="foto-intro">
+    <div class="imagem-container">
+      <img src="assets/suafoto.png" alt="Sua foto" class="foto-intro">
+      <div class="fade-bottom"></div>
+    </div>
     <div class="texto-intro">
       <h1><span class="destaque">Os Segredos dos milionários</span><br>para lucrar 10x mais nesse mercado.</h1>
       <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
@@ -28,10 +31,28 @@
     flex-wrap: wrap;
   }
 
-  .foto-intro {
+  .imagem-container {
+    position: relative;
     width: 380px;
     max-width: 100%;
+  }
+
+  .foto-intro {
+    width: 100%;
     height: auto;
+    display: block;
+  }
+
+  .fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
+    pointer-events: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .texto-intro {
@@ -76,11 +97,12 @@
       font-size: 2rem;
     }
 
-    .foto-intro {
+    .imagem-container {
       width: 280px;
     }
   }
 </style>
+
 
 
 
