@@ -126,6 +126,18 @@
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 10px #000;
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #00ff8855;
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #00ff88cc;
+      }
     }
 
     .btn-voltar {
@@ -145,7 +157,6 @@
       transform: scale(1.05);
     }
 
-    /* Responsivo */
     @media (max-width: 960px) {
       .produtos {
         flex-direction: column;
@@ -214,7 +225,12 @@
     <div class="video">
       <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
     </div>
-    <!-- Adicione mais vídeos se quiser -->
+    <div class="video">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video">
+      <iframe width="320" height="180" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 
   <p class="verde">Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.</p>
