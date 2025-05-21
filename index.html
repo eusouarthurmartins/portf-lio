@@ -425,59 +425,185 @@
   <div class="container">
     <h2>Tire suas dúvidas</h2>
     <div class="faq">
+
       <div class="faq-item">
-        <h3>Como funciona o curso?</h3>
-        <p>O curso é 100% online e você pode assistir quando quiser.</p>
+        <button class="faq-question" aria-expanded="false" aria-controls="resposta1" id="pergunta1">
+          Como funciona o curso?
+          <span class="seta"></span>
+        </button>
+        <div id="resposta1" class="faq-answer" role="region" aria-labelledby="pergunta1">
+          O curso é 100% online e você pode assistir quando quiser, no seu ritmo.
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3>Qual a garantia?</h3>
-        <p>Garantia de 7 dias, se não gostar pode pedir reembolso.</p>
+        <button class="faq-question" aria-expanded="false" aria-controls="resposta2" id="pergunta2">
+          Qual a garantia?
+          <span class="seta"></span>
+        </button>
+        <div id="resposta2" class="faq-answer" role="region" aria-labelledby="pergunta2">
+          Garantia de 7 dias: se não gostar, pode pedir o reembolso sem burocracia.
+        </div>
       </div>
+
       <div class="faq-item">
-        <h3>Posso acessar pelo celular?</h3>
-        <p>Sim! O curso é responsivo e funciona em qualquer dispositivo.</p>
+        <button class="faq-question" aria-expanded="false" aria-controls="resposta3" id="pergunta3">
+          Posso acessar pelo celular?
+          <span class="seta"></span>
+        </button>
+        <div id="resposta3" class="faq-answer" role="region" aria-labelledby="pergunta3">
+          Sim! O curso é responsivo e funciona perfeitamente em qualquer dispositivo.
+        </div>
       </div>
-      <!-- Adicione mais dúvidas aqui -->
+
+      <!-- Adicione mais perguntas aqui -->
+
     </div>
+
+    <button class="btn-comecar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
+      Quero começar lucrando hoje
+    </button>
   </div>
 </section>
 
 <style>
   .duvidas {
-    padding: 40px 20px;
-    /* Sem fundo */
+    padding: 50px 20px;
+    background: none;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .duvidas .container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    text-align: left;
   }
 
   .duvidas h2 {
-    text-align: center;
     font-size: 2.8rem;
-    margin-bottom: 30px;
-    color: #222; /* Pode ajustar para a cor que preferir */
+    text-align: center;
+    margin-bottom: 40px;
+    color: #4a148c; /* Roxo escuro, pode mudar */
+    font-weight: 700;
   }
 
   .faq-item {
-    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
   }
 
-  .faq-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: #444;
+  .faq-question {
+    background: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 18px 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    color: #4a148c;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
   }
 
-  .faq-item p {
+  .faq-question:hover {
+    background-color: #f3e5f5;
+  }
+
+  .seta {
+    border: solid #4a148c;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+  }
+
+  /* Quando aberto, gira a seta */
+  .faq-question[aria-expanded="true"] .seta {
+    transform: rotate(-135deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
     font-size: 1.1rem;
-    color: #666;
+    color: #555;
     line-height: 1.5;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+
+  /* Quando aberto, revela a resposta */
+  .faq-answer.open {
+    max-height: 500px; /* suficiente para a resposta */
+    padding: 15px;
+  }
+
+  /* Botão de começar */
+  .btn-comecar {
+    margin-top: 40px;
+    display: block;
+    background-color: #4a148c;
+    color: #fff;
+    border: none;
+    padding: 18px 30px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(74, 20, 140, 0.5);
+  }
+
+  .btn-comecar:hover {
+    background-color: #6a1b9a;
+  }
+
+  @media (max-width: 600px) {
+    .duvidas h2 {
+      font-size: 2rem;
+    }
+
+    .faq-question {
+      font-size: 1.1rem;
+      padding: 15px 12px;
+    }
+
+    .faq-answer {
+      font-size: 1rem;
+    }
+
+    .btn-comecar {
+      font-size: 1.2rem;
+      padding: 15px 25px;
+      max-width: 100%;
+    }
   }
 </style>
 
+<script>
+  // Script para abrir/fechar as respostas
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      const answer = document.getElementById(button.getAttribute('aria-controls'));
+      if (!expanded) {
+        answer.classList.add('open');
+      } else {
+        answer.classList.remove('open');
+      }
+    });
+  });
+</script>
 
 
 
