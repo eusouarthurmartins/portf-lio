@@ -467,10 +467,17 @@
 </section>
 
 <style>
+  /* Cores douradas e brancas */
+  :root {
+    --dourado: #d4af37;
+    --dourado-escuro: #aa8f1a;
+    --branco: #ffffff;
+  }
+
   .duvidas {
     padding: 50px 20px;
     background: none;
-    color: #222;
+    color: var(--dourado);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -483,12 +490,13 @@
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 40px;
-    color: #4a148c; /* Roxo escuro, pode mudar */
+    color: var(--dourado);
     font-weight: 700;
+    text-shadow: 0 0 5px var(--dourado);
   }
 
   .faq-item {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--dourado-escuro);
     margin-bottom: 15px;
   }
 
@@ -501,30 +509,32 @@
     font-size: 1.3rem;
     cursor: pointer;
     position: relative;
-    color: #4a148c;
+    color: var(--dourado);
     font-weight: 600;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .faq-question:hover {
-    background-color: #f3e5f5;
+    background-color: rgba(212, 175, 55, 0.15);
+    color: var(--branco);
   }
 
   .seta {
-    border: solid #4a148c;
+    border: solid var(--dourado);
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 6px;
     transform: rotate(45deg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
   }
 
   /* Quando aberto, gira a seta */
   .faq-question[aria-expanded="true"] .seta {
     transform: rotate(-135deg);
+    border-color: var(--branco);
   }
 
   .faq-answer {
@@ -532,7 +542,7 @@
     overflow: hidden;
     padding: 0 15px;
     font-size: 1.1rem;
-    color: #555;
+    color: var(--branco);
     line-height: 1.5;
     transition: max-height 0.4s ease, padding 0.4s ease;
   }
@@ -543,28 +553,29 @@
     padding: 15px;
   }
 
-  /* Botão de começar */
+  /* Botão dourado */
   .btn-comecar {
     margin-top: 40px;
     display: block;
-    background-color: #4a148c;
-    color: #fff;
+    background: linear-gradient(45deg, var(--dourado), var(--dourado-escuro));
+    color: var(--branco);
     border: none;
     padding: 18px 30px;
     font-size: 1.4rem;
     font-weight: 700;
     border-radius: 40px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
     width: 100%;
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 15px rgba(74, 20, 140, 0.5);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.7);
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
   }
 
   .btn-comecar:hover {
-    background-color: #6a1b9a;
+    background: linear-gradient(45deg, var(--dourado-escuro), var(--dourado));
   }
 
   @media (max-width: 600px) {
@@ -604,6 +615,7 @@
     });
   });
 </script>
+
 
 
 
