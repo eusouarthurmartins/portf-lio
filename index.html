@@ -338,10 +338,10 @@
 
 
 
-<section class="depoimentos">
+<section class="depoimentos-carrossel">
   <h2>Veja o que dizem sobre o nosso Método:</h2>
-  <div class="carrossel">
-    <div class="slides">
+  <div class="carrossel-dp">
+    <div class="slides-dp">
       <img src="assets/print1.jpg" alt="Depoimento 1">
       <img src="assets/print2.jpg" alt="Depoimento 2">
       <img src="assets/print3.jpg" alt="Depoimento 3">
@@ -352,7 +352,7 @@
       <img src="assets/print8.jpg" alt="Depoimento 8">
       <img src="assets/print9.jpg" alt="Depoimento 9">
       <img src="assets/print10.jpg" alt="Depoimento 10">
-      <!-- Duplicar os slides para efeito infinito -->
+      <!-- Repetidos para loop -->
       <img src="assets/print1.jpg" alt="Depoimento 1 duplicado">
       <img src="assets/print2.jpg" alt="Depoimento 2 duplicado">
     </div>
@@ -360,29 +360,30 @@
 </section>
 
 <style>
-  .depoimentos {
+  .depoimentos-carrossel {
     padding: 60px 20px;
     text-align: center;
     color: #ffd700;
+    background: none;
   }
 
-  .depoimentos h2 {
+  .depoimentos-carrossel h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
   }
 
-  .carrossel {
+  .depoimentos-carrossel .carrossel-dp {
     overflow: hidden;
     width: 100%;
   }
 
-  .slides {
+  .depoimentos-carrossel .slides-dp {
     display: flex;
     gap: 30px;
-    animation: deslizar 50s linear infinite;
+    animation: deslizar-dp 50s linear infinite;
   }
 
-  .slides img {
+  .depoimentos-carrossel .slides-dp img {
     width: 280px;
     height: 500px;
     object-fit: cover;
@@ -391,16 +392,21 @@
     flex-shrink: 0;
   }
 
-  @keyframes deslizar {
+  @keyframes deslizar-dp {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
 
   @media (max-width: 768px) {
-    .slides img {
+    .depoimentos-carrossel .slides-dp img {
       width: 200px;
       height: 360px;
     }
+
+    .depoimentos-carrossel h2 {
+      font-size: 2rem;
+    }
   }
 </style>
+
 
