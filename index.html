@@ -1,65 +1,56 @@
-<section class="banner-lp" id="banner-principal">
-  <div class="overlay-banner"></div>
-  <div class="conteudo-banner">
-    <h1><span class="destaque">Os Segredos dos milionários</span><br>para lucrar 10x mais nesse mercado.</h1>
-    <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-      Quero aprender
-    </button>
+<section class="sessao-intro" id="sessao-intro">
+  <div class="conteudo-intro">
+    <img src="assets/suafoto.png" alt="Sua foto" class="foto-intro">
+    <div class="texto-intro">
+      <h1><span class="destaque">Os Segredos dos milionários</span><br>para lucrar 10x mais nesse mercado.</h1>
+      <button onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
+        Quero aprender
+      </button>
+    </div>
   </div>
 </section>
 
 <style>
-  /* Zera margens/paddings globais */
-  body, html {
-    margin: 0;
-    padding: 0;
+  .sessao-intro {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    background: none;
   }
 
-  .banner-lp {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('assets/banner.jpg'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: center;
+  .conteudo-intro {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 8%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .overlay-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
+    gap: 40px;
+    max-width: 1200px;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* camada escura para contraste */
-    z-index: 1;
+    flex-wrap: wrap;
   }
 
-  .conteudo-banner {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-    color: white;
+  .foto-intro {
+    width: 380px;
+    max-width: 100%;
+    height: auto;
   }
 
-  .conteudo-banner h1 {
-    font-size: 2.8rem;
-    line-height: 1.3;
-    margin-bottom: 30px;
+  .texto-intro {
     color: #fff;
+    max-width: 600px;
   }
 
-  .conteudo-banner .destaque {
+  .texto-intro h1 {
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+
+  .texto-intro .destaque {
     color: #FFD700;
     font-weight: bold;
   }
 
-  .conteudo-banner button {
+  .texto-intro button {
     background-color: #FFD700;
     color: #000;
     border: none;
@@ -71,19 +62,22 @@
     transition: background 0.3s ease;
   }
 
-  .conteudo-banner button:hover {
+  .texto-intro button:hover {
     background-color: #e6be00;
   }
 
   @media (max-width: 768px) {
-    .banner-lp {
-      justify-content: center;
-      padding: 20px;
+    .conteudo-intro {
+      flex-direction: column;
       text-align: center;
     }
 
-    .conteudo-banner h1 {
+    .texto-intro h1 {
       font-size: 2rem;
+    }
+
+    .foto-intro {
+      width: 280px;
     }
   }
 </style>
