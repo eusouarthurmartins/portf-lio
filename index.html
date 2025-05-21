@@ -247,6 +247,98 @@
 
 
 
+--------------------------------------------
+
+
+
+
+
+
+---------------------------
+
+
+
+
+
+
+
+
+<section class="depoimentos-carrossel">
+  <h2>Veja o que dizem sobre o nosso Método:</h2>
+  <div class="carrossel-dp">
+    <div class="slides-dp">
+      <img src="assets/print1.jpg" alt="Depoimento 1">
+      <img src="assets/print2.jpg" alt="Depoimento 2">
+      <img src="assets/print3.jpg" alt="Depoimento 3">
+      <img src="assets/print4.jpg" alt="Depoimento 4">
+      <img src="assets/print5.jpg" alt="Depoimento 5">
+      <img src="assets/print6.jpg" alt="Depoimento 6">
+      <img src="assets/print7.jpg" alt="Depoimento 7">
+      <img src="assets/print8.jpg" alt="Depoimento 8">
+      <img src="assets/print9.jpg" alt="Depoimento 9">
+      <img src="assets/print10.jpg" alt="Depoimento 10">
+      <!-- Repetidos para loop -->
+      <img src="assets/print1.jpg" alt="Depoimento 1 duplicado">
+      <img src="assets/print2.jpg" alt="Depoimento 2 duplicado">
+    </div>
+  </div>
+</section>
+
+<style>
+  .depoimentos-carrossel {
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffd700;
+    background: none;
+  }
+
+  .depoimentos-carrossel h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .depoimentos-carrossel .carrossel-dp {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .depoimentos-carrossel .slides-dp {
+    display: flex;
+    gap: 30px;
+    animation: deslizar-dp 50s linear infinite;
+  }
+
+  .depoimentos-carrossel .slides-dp img {
+    width: 280px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    flex-shrink: 0;
+  }
+
+  @keyframes deslizar-dp {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (max-width: 768px) {
+    .depoimentos-carrossel .slides-dp img {
+      width: 200px;
+      height: 360px;
+    }
+
+    .depoimentos-carrossel h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+----------------------------------------
+
+
+
+
 
 
 <section class="garantia-horizontal">
@@ -323,87 +415,6 @@
     }
 
     .garantia-horizontal h2 {
-      font-size: 2rem;
-    }
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-<section class="depoimentos-carrossel">
-  <h2>Veja o que dizem sobre o nosso Método:</h2>
-  <div class="carrossel-dp">
-    <div class="slides-dp">
-      <img src="assets/print1.jpg" alt="Depoimento 1">
-      <img src="assets/print2.jpg" alt="Depoimento 2">
-      <img src="assets/print3.jpg" alt="Depoimento 3">
-      <img src="assets/print4.jpg" alt="Depoimento 4">
-      <img src="assets/print5.jpg" alt="Depoimento 5">
-      <img src="assets/print6.jpg" alt="Depoimento 6">
-      <img src="assets/print7.jpg" alt="Depoimento 7">
-      <img src="assets/print8.jpg" alt="Depoimento 8">
-      <img src="assets/print9.jpg" alt="Depoimento 9">
-      <img src="assets/print10.jpg" alt="Depoimento 10">
-      <!-- Repetidos para loop -->
-      <img src="assets/print1.jpg" alt="Depoimento 1 duplicado">
-      <img src="assets/print2.jpg" alt="Depoimento 2 duplicado">
-    </div>
-  </div>
-</section>
-
-<style>
-  .depoimentos-carrossel {
-    padding: 60px 20px;
-    text-align: center;
-    color: #ffd700;
-    background: none;
-  }
-
-  .depoimentos-carrossel h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
-
-  .depoimentos-carrossel .carrossel-dp {
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .depoimentos-carrossel .slides-dp {
-    display: flex;
-    gap: 30px;
-    animation: deslizar-dp 50s linear infinite;
-  }
-
-  .depoimentos-carrossel .slides-dp img {
-    width: 280px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    flex-shrink: 0;
-  }
-
-  @keyframes deslizar-dp {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  @media (max-width: 768px) {
-    .depoimentos-carrossel .slides-dp img {
-      width: 200px;
-      height: 360px;
-    }
-
-    .depoimentos-carrossel h2 {
       font-size: 2rem;
     }
   }
