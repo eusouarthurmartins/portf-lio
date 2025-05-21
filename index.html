@@ -340,67 +340,67 @@
 
 <section class="depoimentos">
   <h2>Veja o que dizem sobre o nosso Método:</h2>
-
-  <div class="depoimentos-container">
-    <div class="depoimento">
-      <img src="assets/print1.jpg" alt="Depoimento WhatsApp 1" />
+  <div class="carrossel">
+    <div class="slides">
+      <img src="assets/print1.jpg" alt="Depoimento 1">
+      <img src="assets/print2.jpg" alt="Depoimento 2">
+      <img src="assets/print3.jpg" alt="Depoimento 3">
+      <img src="assets/print4.jpg" alt="Depoimento 4">
+      <img src="assets/print5.jpg" alt="Depoimento 5">
+      <img src="assets/print6.jpg" alt="Depoimento 6">
+      <img src="assets/print7.jpg" alt="Depoimento 7">
+      <img src="assets/print8.jpg" alt="Depoimento 8">
+      <img src="assets/print9.jpg" alt="Depoimento 9">
+      <img src="assets/print10.jpg" alt="Depoimento 10">
+      <!-- Duplicar os slides para efeito infinito -->
+      <img src="assets/print1.jpg" alt="Depoimento 1 duplicado">
+      <img src="assets/print2.jpg" alt="Depoimento 2 duplicado">
     </div>
-    <div class="depoimento">
-      <img src="assets/print2.jpg" alt="Depoimento WhatsApp 2" />
-    </div>
-    <div class="depoimento">
-      <img src="assets/print3.jpg" alt="Depoimento WhatsApp 3" />
-    </div>
-    <!-- Você pode duplicar este bloco para mais prints -->
   </div>
 </section>
 
 <style>
   .depoimentos {
-    padding: 60px 30px;
-    background: linear-gradient(160deg, #000 40%, #1a1a1a 100%);
-    color: #ffd700;
+    padding: 60px 20px;
     text-align: center;
+    color: #ffd700;
   }
 
   .depoimentos h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #ffd700;
   }
 
-  .depoimentos-container {
+  .carrossel {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slides {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 30px;
+    animation: deslizar 50s linear infinite;
   }
 
-  .depoimento {
+  .slides img {
     width: 280px;
     height: 500px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    background: #111;
-    transition: transform 0.3s ease;
-  }
-
-  .depoimento:hover {
-    transform: scale(1.05);
-  }
-
-  .depoimento img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    flex-shrink: 0;
+  }
+
+  @keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
   @media (max-width: 768px) {
-    .depoimento {
-      width: 100%;
-      height: auto;
+    .slides img {
+      width: 200px;
+      height: 360px;
     }
   }
 </style>
+
