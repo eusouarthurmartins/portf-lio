@@ -249,43 +249,50 @@
 
 
 
-<section class="garantia-centralizada">
-  <div class="imagem-pulsante">
+<section class="garantia-horizontal">
+  <div class="imagem">
     <img src="https://i.imgur.com/4YcX9Vz.png" alt="Garantia 7 dias" />
   </div>
-  <h2>Garantia de 7 dias</h2>
-  <p>
-    Se você não ficar satisfeito com o curso, devolvemos seu dinheiro integralmente, sem burocracia.
-    Aproveite com segurança e comece a transformar suas operações hoje mesmo!
-  </p>
+  <div class="texto">
+    <h2>Garantia de 7 dias</h2>
+    <p>
+      Se você não ficar satisfeito com o curso, devolvemos seu dinheiro integralmente, sem burocracia.
+      Aproveite com segurança e comece a transformar suas operações hoje mesmo!
+    </p>
+  </div>
 </section>
 
 <style>
-  .garantia-centralizada {
-    background: #0a0a0a;
-    color: white;
-    text-align: center;
+  .garantia-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
     padding: 40px 20px;
-    max-width: 450px;
+    max-width: 900px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 
-  .imagem-pulsante img {
-    max-width: 220px;
+  .garantia-horizontal .imagem img {
+    max-width: 200px;
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 0 15px #d4af37cc;
     animation: pulse 2.5s infinite;
-    margin-bottom: 25px;
   }
 
-  h2 {
+  .garantia-horizontal .texto {
+    max-width: 500px;
+  }
+
+  .garantia-horizontal h2 {
     color: #d4af37;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     margin-bottom: 15px;
   }
 
-  p {
+  .garantia-horizontal p {
     color: #fff;
     font-size: 1.15rem;
     line-height: 1.5;
@@ -303,6 +310,21 @@
     100% {
       transform: scale(1);
       box-shadow: 0 0 15px #d4af37cc;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .garantia-horizontal {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .garantia-horizontal .texto {
+      max-width: 100%;
+    }
+
+    .garantia-horizontal h2 {
+      font-size: 2rem;
     }
   }
 </style>
