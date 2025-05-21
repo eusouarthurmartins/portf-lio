@@ -1,116 +1,240 @@
-<!-- Seção de Vídeos com Carrossel Controlado -->
-<section style="background-color: #000; padding: 60px 20px;">
-  <h2 style="color: #00ff88; text-align: center; font-size: 2.5rem; margin-bottom: 40px;">
-    Aqui estão algumas aulas que você vai encontrar:
-  </h2>
-  <div class="carrossel-container">
-    <button class="seta esquerda" onclick="scrollCarrossel(-1)">←</button>
-    <div class="carrossel" id="carrossel">
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID1"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID2"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID3"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID4"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID5"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID6"></iframe></div>
-      <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID7"></iframe></div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upsell Trader</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0f0;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .green {
+      color: #00ff66;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 50px 0;
+    }
+
+    .produto {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 15px #444;
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover {
+      transform: scale(1.03);
+    }
+
+    .produto h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .produto p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .preco {
+      font-size: 1.4rem;
+      color: #0f0;
+      margin: 10px 0;
+    }
+
+    .botao {
+      background-color: #00ff66;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .botao:hover {
+      background-color: #00cc55;
+    }
+
+    .videos-section {
+      margin-top: 80px;
+    }
+
+    .carrossel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .videos {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .video {
+      min-width: 300px;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 20px rgba(0,255,100,0.4);
+    }
+
+    iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #00ff66;
+      color: #000;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 1;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00ff66;
+    }
+
+    .nav-btn:hover {
+      background-color: #00cc55;
+    }
+
+    .nav-left {
+      left: 10px;
+    }
+
+    .nav-right {
+      right: 10px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
+    .btn-voltar {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .produtos {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .video {
+        min-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Que bom que você chegou até aqui.</h1>
+    <p>Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você! Segue abaixo alguns produtos que podem te ajudar no mercado. <strong>Mas lembre-se, não há fórmula mágica. Tudo só depende de você.</strong></p>
+    <p class="green">Você está a um clique da sua liberdade financeira!</p>
+
+    <div class="produtos" id="produtos">
+      <div class="produto">
+        <h2>MTI - Método Trader Inteligente</h2>
+        <p class="preco">R$ 197,00</p>
+        <button class="botao" onclick="location.href='https://seulink.com/MTI'">Comprar Agora</button>
+        <p>Curso completo que te ensina a operar com inteligência e consistência. Estratégias validadas, passo a passo prático.</p>
+      </div>
+      <div class="produto">
+        <h2>Código da Alavancagem</h2>
+        <p class="preco">R$ 97,00</p>
+        <button class="botao" onclick="location.href='https://seulink.com/CodigoAlavancagem'">Comprar Agora</button>
+        <p>Aprenda como alavancar sua banca com técnicas usadas pelos melhores traders do Brasil. Ideal para contas pequenas.</p>
+      </div>
+      <div class="produto">
+        <h2>Ebook "Do Zero ao Trader"</h2>
+        <p class="preco">R$ 27,00</p>
+        <button class="botao" onclick="location.href='https://seulink.com/EbookTrader'">Comprar Agora</button>
+        <p>Guia completo para iniciantes, com tudo que você precisa saber para começar do zero e alcançar os primeiros lucros.</p>
+      </div>
     </div>
-    <button class="seta direita" onclick="scrollCarrossel(1)">→</button>
+
+    <div class="videos-section">
+      <p class="green">Aqui estão algumas aulas que você vai encontrar:</p>
+
+      <div class="carrossel">
+        <button class="nav-btn nav-left" onclick="scrollVideos(-1)">‹</button>
+        <div class="videos" id="videoContainer">
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe></div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID7" allowfullscreen></iframe></div>
+        </div>
+        <button class="nav-btn nav-right" onclick="scrollVideos(1)">›</button>
+      </div>
+
+      <p class="green">Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.</p>
+      <button class="botao btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">Ver Produtos Novamente</button>
+    </div>
   </div>
-  <h3 style="color: #00ff88; text-align: center; font-size: 2rem; margin: 60px 0 30px;">
-    Se você gostou e quer começar lucrando de verdade com esse mercado maravilhoso, aguardo você do outro lado.
-  </h3>
-  <div style="text-align: center;">
-    <a href="#produtos" style="background-color: #ffd700; padding: 15px 30px; color: #000; font-weight: bold; border-radius: 10px; text-decoration: none; font-size: 1.2rem; transition: transform 0.2s ease-in-out;">
-      Quero Escolher Meu Produto
-    </a>
-  </div>
-</section>
 
-<style>
-  .carrossel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 0 40px;
-  }
+  <script>
+    const container = document.getElementById('videoContainer');
+    const cardWidth = 320; // largura do vídeo + margem
 
-  .carrossel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-  }
+    let scrollIndex = 0;
+    const maxScroll = container.children.length - Math.floor(container.offsetWidth / cardWidth);
 
-  .carrossel::-webkit-scrollbar {
-    display: none;
-  }
-
-  .video {
-    min-width: 300px;
-    margin-right: 20px;
-    animation: pulse 2s infinite;
-  }
-
-  .video iframe {
-    width: 300px;
-    height: 170px;
-    border: none;
-    border-radius: 12px;
-  }
-
-  .seta {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #111;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
-    font-size: 1.5rem;
-  }
-
-  .seta.esquerda {
-    left: 0;
-  }
-
-  .seta.direita {
-    right: 0;
-  }
-
-  .seta:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-    100% { transform: scale(1); }
-  }
-</style>
-
-<script>
-  const carrossel = document.getElementById('carrossel');
-  const btnEsquerda = document.querySelector('.seta.esquerda');
-  const btnDireita = document.querySelector('.seta.direita');
-
-  function scrollCarrossel(direcao) {
-    const larguraItem = carrossel.querySelector('.video').offsetWidth + 20;
-    carrossel.scrollBy({ left: direcao * larguraItem, behavior: 'smooth' });
-
-    setTimeout(verificaSetas, 500);
-  }
-
-  function verificaSetas() {
-    btnEsquerda.disabled = carrossel.scrollLeft === 0;
-
-    const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
-    btnDireita.disabled = carrossel.scrollLeft >= maxScrollLeft - 5;
-  }
-
-  carrossel.addEventListener('scroll', verificaSetas);
-  window.addEventListener('load', verificaSetas);
-</script>
+    function scrollVideos(direction) {
+      scrollIndex += direction;
+      if (scrollIndex < 0) scrollIndex = 0;
+      if (scrollIndex > maxScroll) scrollIndex = maxScroll;
+      container.style.transform = `translateX(-${scrollIndex * cardWidth}px)`;
+    }
+  </script>
+</body>
+</html>
