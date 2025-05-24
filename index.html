@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,7 +15,6 @@
       text-align: center;
     }
 
-    /* resto do CSS sem alteração */
     h1 {
       font-size: 2.4rem;
       color: gold;
@@ -91,6 +89,7 @@
       margin-bottom: 20px;
       font-weight: 700;
       width: 100%;
+      animation: pulse 2.5s infinite;
     }
 
     .produto button:hover {
@@ -120,22 +119,23 @@
     }
 
     .video {
-      min-width: 320px;
+      width: 90%;
+      max-width: 800px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 0 10px #000;
       animation: pulse 2.5s infinite;
-      flex-shrink: 0;
+      margin-bottom: 40px;
     }
 
     @keyframes pulse {
       0%, 100% {
         transform: scale(1);
-        box-shadow: 0 0 10px #00ff8855;
+        box-shadow: 0 0 10px #ffd70055;
       }
       50% {
         transform: scale(1.05);
-        box-shadow: 0 0 25px #00ff88cc;
+        box-shadow: 0 0 25px #ffd700cc;
       }
     }
 
@@ -182,13 +182,19 @@
       }
 
       .video {
-        min-width: 90vw;
-        max-width: 320px;
+        width: 100%;
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
+
+  <div class="video">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/gaHYTomw-Yw"
+    frameborder="0" allowfullscreen></iframe>
+  </div>
+
   <h1>Que bom que você chegou até aqui.</h1>
   <p class="intro">
     Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você!<br/>
@@ -227,25 +233,11 @@
     </div>
   </div>
 
-  <p class="verde">Assista esse vídeo antes:</p>
-
-  <div class="carrossel-container">
-    <div id="carrossel" class="carrossel">
-   
-      <div class="video"><iframe width="320" height="180" src="https://www.youtube.com/embed/gaHYTomw-Yw"
- frameborder="0" allowfullscreen></iframe></div>
-     
-    </div>
-  </div>
-
-  
-
   <div style="text-align: center;">
-  <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-    Escolher meu produto agora
-  </button>
-</div>
-
+    <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
+      Escolher meu produto agora
+    </button>
+  </div>
 
 </body>
 </html>
