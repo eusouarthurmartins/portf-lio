@@ -2,146 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thurzin Trader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thurzin Trader - Separação dos Players</title>
   <style>
     body {
-      background: url('imagemfundo1.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      color: gold;
-      margin-bottom: 20px;
-    }
-
-    p.intro {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-      color: #ddd;
-    }
-
-    .verde {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #ddd;
-      margin: 50px 0 20px;
-    }
-
-    .produtos {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-
-    .produto {
-      background: #111;
-      padding: 30px 25px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px #ffd70055;
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-
-    .produto:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px #ffd700cc;
-    }
-
-    .produto h3 {
-      font-size: 1.8rem;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
       color: #fff;
-      margin-bottom: 10px;
-      text-align: center;
     }
 
-    .preco {
-      font-size: 1.5rem;
-      color: #00ff88;
-      margin: 10px 0 15px;
-    }
-
-    .produto button {
-      background: gold;
-      color: black;
-      border: none;
-      padding: 12px 28px;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 700;
-      width: 100%;
-      animation: pulse 2.5s infinite;
-    }
-
-    .produto button:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .descricao {
-      font-size: 1rem;
-      color: #ccc;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    .video {
-      width: 90%;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px #000;
-      animation: pulse 2.5s infinite;
-    }
-
-    .btn-voltar {
-      background: gold;
-      color: black;
-      padding: 14px 30px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      margin-top: 20px;
-      width: 250px;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .btn-voltar:hover {
-      background: #fff;
-      color: #000;
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #ffd70055;
-      }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #ffd700cc;
-      }
-    }
-
-    /* Seção Nova */
     .separacao {
       background: rgba(0, 0, 0, 0.85);
       padding: 60px 20px;
@@ -184,16 +55,6 @@
     }
 
     @media (max-width: 960px) {
-      .produtos {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .produto {
-        width: 90%;
-        max-width: 400px;
-      }
-
       .conteudo-separacao {
         flex-direction: column;
         text-align: center;
@@ -207,11 +68,6 @@
 </head>
 <body>
 
-  <div class="video">
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/gaHYTomw-Yw" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <!-- Nova seção -->
   <section class="separacao">
     <div class="conteudo-separacao">
       <img src="sua-imagem.png" alt="Thurzin Trader" class="foto-thurzin" />
@@ -227,53 +83,8 @@
     </div>
   </section>
 
-  <h1>Que bom que você chegou até aqui.</h1>
-  <p class="intro">
-    Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você!<br/>
-    Segue abaixo alguns produtos que podem te ajudar no mercado.<br/>
-    Mas lembre-se, não há fórmula mágica. Tudo só depende de você.
-  </p>
-
-  <p class="verde">Você está a um clique da sua liberdade financeira!</p>
-
-  <div id="produtos" class="produtos">
-    <div class="produto">
-      <h3>🚀 MTI - Método Trader Inteligente</h3>
-      <div class="preco">12x de R$19,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/S98634850D?off=zepj63xj&checkoutMode=10'">Quero esse Método</button>
-      <div class="descricao">
-        Curso completo com 10 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para todos os níveis de traders.
-      </div>
-    </div>
-
-    <div class="produto">
-      <h3>⚡ Código da Alavancagem</h3>
-      <div class="preco">12x de R$9,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/P99676603K?off=xnabk69w&checkoutMode=10'">Quero acessar</button>
-      <div class="descricao">
-        Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
-      </div>
-    </div>
-
-    <div class="produto">
-      <h3>📘 Ebook "Do Zero ao Trader"</h3>
-      <div class="preco">R$ 9,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/L99314980G?off=nfekwc7t&checkoutMode=10'">Quero esse Ebook</button>
-      <div class="descricao">
-        Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align: center;">
-    <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-      Escolher meu produto agora
-    </button>
-  </div>
-
 </body>
 </html>
-
 
 
 
