@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Método Funil Eterno</title>
+    <title>Arthur Martins</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -13,13 +13,26 @@
       body {
         font-family: 'Orbitron', sans-serif;
       }
+      /* Fundo da hero com imagem */
+      .hero-bg {
+        background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+      }
+      /* Estilo das imagens dos depoimentos */
+      .depoimento-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 9999px; /* círculo */
+        object-fit: cover;
+        margin-right: 1rem;
+        border: 2px solid #06b6d4; /* borda cyan */
+      }
     </style>
   </head>
   <body class="bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white">
     <!-- Hero -->
-    <section class="min-h-screen flex items-center justify-center text-center px-6 backdrop-blur-md bg-white/5">
+    <section class="min-h-screen flex items-center justify-center text-center px-6 backdrop-blur-md bg-white/5 hero-bg">
       <div>
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyan-400 animate-pulse">Funil Eterno</h1>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyan-400 animate-pulse">Arthur Martins</h1>
         <p class="text-lg md:text-2xl max-w-3xl mx-auto text-gray-300">
           Descubra o Método Completo que Escala Suas Vendas para R$100 Mil Mensais – Com um Sistema de Vendas Sólido e Automático que Poucos Conhecem
         </p>
@@ -48,7 +61,7 @@
     <!-- Pilares -->
     <section class="py-20 px-6 bg-gradient-to-r from-cyan-800/20 via-black/80 to-cyan-900/20 backdrop-blur-md">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-300">Os 3 Pilares do Funil Eterno</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-300">Os 3 Pilares do Arthur Martins</h2>
         <ul class="space-y-10 text-gray-200">
           <li>
             <h3 class="text-xl font-semibold text-white">1. Criação de Produtos Lucrativos</h3>
@@ -66,13 +79,22 @@
       </div>
     </section>
 
-    <!-- Depoimentos (Placeholder) -->
+    <!-- Depoimentos -->
     <section class="py-20 px-6 bg-black/60 backdrop-blur">
       <h2 class="text-center text-3xl text-cyan-400 font-bold mb-10">Resultados Reais</h2>
       <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 1]</div>
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 2]</div>
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 3]</div>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex items-center">
+          <img src="assets/depo1.jpg" alt="Depoimento 1" class="depoimento-img" />
+          <p>“O Arthur me ajudou a transformar meu negócio, e hoje faço vendas diárias com o método!”</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex items-center">
+          <img src="assets/depo2.jpg" alt="Depoimento 2" class="depoimento-img" />
+          <p>“Nunca imaginei conseguir escalar tanto com um sistema tão simples e eficiente.”</p>
+        </div>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex items-center">
+          <img src="assets/depo3.jpg" alt="Depoimento 3" class="depoimento-img" />
+          <p>“Recomendo o método Arthur Martins para todos que querem resultados reais no perpétuo.”</p>
+        </div>
       </div>
     </section>
 
@@ -80,7 +102,7 @@
     <section id="inscricao" class="py-20 px-6 bg-gradient-to-t from-black via-gray-900 to-black backdrop-blur-sm">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl font-bold text-cyan-400 mb-6">Oferta Exclusiva</h2>
-        <p class="text-lg text-gray-300 mb-4">Método Funil Eterno + Bônus Exclusivos:</p>
+        <p class="text-lg text-gray-300 mb-4">Método Arthur Martins + Bônus Exclusivos:</p>
         <ul class="text-left text-gray-200 mb-6 space-y-2">
           <li>✓ Modelos Secretos de Copy</li>
           <li>✓ Mapa de Ativação</li>
@@ -96,8 +118,8 @@
     <!-- Mentora -->
     <section class="py-20 px-6 bg-black/70 backdrop-blur-lg">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Conheça sua Mentora</h2>
-        <p class="text-gray-300 mb-4">Gabi Cervantes é especialista em funis perpétuos e já faturou 8 dígitos online.</p>
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Conheça seu Mentor</h2>
+        <p class="text-gray-300 mb-4">Arthur Martins é especialista em funis perpétuos e já faturou 8 dígitos online.</p>
         <p class="text-sm text-gray-400">+30.000 alunos transformados • +500k inscritos no YouTube • +300k seguidores no Instagram</p>
       </div>
     </section>
@@ -113,7 +135,7 @@
     <!-- Footer -->
     <footer class="py-10 px-6 text-center text-sm text-gray-500 bg-black/60 backdrop-blur">
       <p>Política de Privacidade | Termos de Uso</p>
-      <p>© Gabi Cervantes – Todos os Direitos Reservados</p>
+      <p>© Arthur Martins – Todos os Direitos Reservados</p>
     </footer>
   </body>
 </html>
