@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arthur Martins</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
     <style>
       html {
         scroll-behavior: smooth;
@@ -13,16 +13,16 @@
       body {
         font-family: 'Orbitron', sans-serif;
       }
-      /* Imagem de fundo na seção hero */
-      #hero {
-        background: url('assets/hero-background.jpg') no-repeat center center/cover;
-      }
     </style>
   </head>
   <body class="bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white">
+
     <!-- Hero -->
-    <section id="hero" class="min-h-screen flex items-center justify-center text-center px-6 backdrop-blur-md bg-white/5">
-      <div>
+    <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-6 bg-cover bg-center" style="background-image: url('assets/sua-imagem.jpg');">
+      <!-- Overlay escuro atrás do texto -->
+      <div class="absolute inset-0 bg-black/60 z-0"></div>
+      <!-- Conteúdo visível por cima -->
+      <div class="relative z-10">
         <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyan-400 animate-pulse">Arthur Martins</h1>
         <p class="text-lg md:text-2xl max-w-3xl mx-auto text-gray-300">
           Descubra o Método Completo que Escala Suas Vendas para R$100 Mil Mensais – Com um Sistema de Vendas Sólido e Automático que Poucos Conhecem
@@ -74,17 +74,17 @@
     <section class="py-20 px-6 bg-black/60 backdrop-blur">
       <h2 class="text-center text-3xl text-cyan-400 font-bold mb-10">Resultados Reais</h2>
       <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex flex-col items-center">
-          <img src="assets/depo1.jpg" alt="Depoimento 1" class="w-24 h-24 rounded-full mb-4 object-cover" />
-          <p>[Depoimento 1]</p>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">
+          <img src="assets/depo1.jpg" alt="Depoimento 1" class="rounded-full w-20 h-20 mx-auto mb-4 object-cover" />
+          <p>“Esse método mudou tudo pra mim! Hoje vendo todos os dias.”</p>
         </div>
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex flex-col items-center">
-          <img src="assets/depo2.jpg" alt="Depoimento 2" class="w-24 h-24 rounded-full mb-4 object-cover" />
-          <p>[Depoimento 2]</p>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">
+          <img src="assets/depo2.jpg" alt="Depoimento 2" class="rounded-full w-20 h-20 mx-auto mb-4 object-cover" />
+          <p>“Consegui escalar meu faturamento com o que aprendi aqui.”</p>
         </div>
-        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300 flex flex-col items-center">
-          <img src="assets/depo3.jpg" alt="Depoimento 3" class="w-24 h-24 rounded-full mb-4 object-cover" />
-          <p>[Depoimento 3]</p>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">
+          <img src="assets/depo3.jpg" alt="Depoimento 3" class="rounded-full w-20 h-20 mx-auto mb-4 object-cover" />
+          <p>“Simples, direto e aplicável. Finalmente algo que funciona!”</p>
         </div>
       </div>
     </section>
@@ -126,7 +126,7 @@
     <!-- Footer -->
     <footer class="py-10 px-6 text-center text-sm text-gray-500 bg-black/60 backdrop-blur">
       <p>Política de Privacidade | Termos de Uso</p>
-      <p>© Gabi Cervantes – Todos os Direitos Reservados</p>
+      <p>© Arthur Martins – Todos os Direitos Reservados</p>
     </footer>
   </body>
 </html>
