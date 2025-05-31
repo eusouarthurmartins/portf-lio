@@ -1,629 +1,119 @@
 <!DOCTYPE html>
-<section class="sessao-liberdade" style="padding: 40px 20px; text-align: center;">
-  <h2 style="color: gold; font-size: 2.2rem; margin-bottom: 25px;">
-    O que separa você de grandes players nesse mercado?
-  </h2>
-  <p style="color: white; font-size: 1.2rem; line-height: 1.7; max-width: 800px; margin: 0 auto;">
-    Ninguém melhor do que eu, para fazer você entender que se você não lucra com esse mercado ainda em 2025, você está usando as técnicas erradas.
-    Então se você quer começar lucrando ainda hoje, tenho um método que vai fazer isso acontecer.<br><br>
-    Sua tão sonhada liberdade financeira pode parecer distante. Mas acredite, você está a um clique dela!
-  </p>
-</section>
-
-
-
-
-<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thurzin Trader</title>
-  <style>
-    body {
-      background: url('imagemfundo1.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      color: gold;
-      margin-bottom: 20px;
-    }
-
-    p.intro {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto 40px;
-      line-height: 1.6;
-      color: #ddd;
-    }
-
-    .verde {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #ddd;
-      margin: 50px 0 20px;
-    }
-
-    .produtos {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      margin-bottom: 50px;
-      scroll-margin-top: 100px;
-    }
-
-    .produto {
-      background: #111;
-      padding: 30px 25px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px #ffd70055;
-      width: 300px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s ease;
-    }
-
-    .produto:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px #ffd700cc;
-    }
-
-    .produto h3 {
-      font-size: 1.8rem;
-      color: #fff;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .preco {
-      font-size: 1.5rem;
-      color: #00ff88;
-      margin: 10px 0 15px;
-    }
-
-    .produto button {
-      background: gold;
-      color: black;
-      border: none;
-      padding: 12px 28px;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-bottom: 20px;
-      font-weight: 700;
-      width: 100%;
-      animation: pulse 2.5s infinite;
-    }
-
-    .produto button:hover {
-      background: #fff;
-      color: #000;
-    }
-
-    .descricao {
-      font-size: 1rem;
-      color: #ccc;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    .carrossel-container {
-      max-width: 100%;
-      margin: 0 auto 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .carrossel {
-      display: flex;
-      gap: 20px;
-      padding: 20px 0;
-    }
-
-    .video-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-
-    .video {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px #000;
-      animation: pulse 2.5s infinite;
-      margin: 0 auto;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 0 10px #ffd70055;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método Funil Eterno</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
-      50% {
-        transform: scale(1.05);
-        box-shadow: 0 0 25px #ffd700cc;
+      body {
+        font-family: 'Orbitron', sans-serif;
       }
-    }
-
-    .btn-voltar {
-      background: gold;
-      color: black;
-      padding: 14px 30px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-      margin-top: 20px;
-      width: 250px;
-    }
-
-    .btn-voltar:hover {
-      background: #fff;
-      color: #000;
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 960px) {
-      .produtos {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .produto {
-        width: 90%;
-        max-width: 400px;
-        margin-bottom: 30px;
-      }
-
-      .carrossel-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .carrossel {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .video {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="video-container">
-    <div class="video">
-      <iframe width="100%" height="400" src="https://www.youtube.com/embed/VlsSHC35rKM"
-      frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <h1>Que bom que você chegou até aqui.</h1>
-  <p class="intro">
-    Se você quer se consolidar nesse mercado de opções binárias, tenho algumas propostas pra você!<br/>
-    Segue abaixo alguns produtos que podem te ajudar no mercado.<br/>
-    Mas lembre-se, não há fórmula mágica. Tudo só depende de você.
-  </p>
-
-  <p class="verde">Espero você lá do outro lado!</p>
-
-  <div id="produtos" class="produtos">
-    <div class="produto">
-      <h3>🚀 MTI - Método Trader Inteligente</h3>
-      <div class="preco">12x de R$19,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/S98634850D?off=zepj63xj&checkoutMode=10'">Quero esse Método</button>
-      <div class="descricao">
-        Curso completo com 10 módulos + bônus. Aprenda desde o básico até estratégias avançadas, com mentalidade e gestão. Ideal para todos os níveis de traders.
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-gray-900 via-black to-gray-950 text-white">
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center text-center px-6 backdrop-blur-md bg-white/5">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyan-400 animate-pulse">Funil Eterno</h1>
+        <p class="text-lg md:text-2xl max-w-3xl mx-auto text-gray-300">
+          Descubra o Método Completo que Escala Suas Vendas para R$100 Mil Mensais – Com um Sistema de Vendas Sólido e Automático que Poucos Conhecem
+        </p>
+        <a href="#inscricao" class="mt-8 inline-block px-8 py-3 bg-cyan-500 hover:bg-cyan-600 text-black font-bold rounded-full transition-all shadow-xl">Quero Garantir Minha Vaga</a>
       </div>
-    </div>
+    </section>
 
-    <div class="produto">
-      <h3>⚡ Código da Alavancagem</h3>
-      <div class="preco">12x de R$9,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/P99676603K?off=xnabk69w&checkoutMode=10'">Quero acessar</button>
-      <div class="descricao">
-        Estratégias focadas em alavancar pequenas bancas com alto potencial. Inclui estudos reais, exemplos práticos e técnicas exclusivas.
+    <!-- Benefícios -->
+    <section class="py-20 px-6 bg-black/50 backdrop-blur-lg">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+        <div>
+          <h3 class="text-xl text-cyan-400 font-semibold mb-2">Lucro e Escala</h3>
+          <p class="text-gray-300">Tenha lucro sem ser escravo do seu próprio negócio.</p>
+        </div>
+        <div>
+          <h3 class="text-xl text-cyan-400 font-semibold mb-2">Vantagem Desleal</h3>
+          <p class="text-gray-300">Construa um sistema previsível que vende todo dia.</p>
+        </div>
+        <div>
+          <h3 class="text-xl text-cyan-400 font-semibold mb-2">Múltiplos Funis</h3>
+          <p class="text-gray-300">Venda diversos produtos com escala automática.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="produto">
-      <h3>📘 Ebook "Do Zero ao Trader"</h3>
-      <div class="preco">R$ 9,99</div>
-      <button onclick="window.location.href='https://pay.hotmart.com/L99314980G?off=nfekwc7t&checkoutMode=10'">Quero esse Ebook</button>
-      <div class="descricao">
-        Leitura rápida, direta e prática para quem está começando agora. Entenda os primeiros passos, conceitos básicos e como dar os primeiros cliques com segurança.
+    <!-- Pilares -->
+    <section class="py-20 px-6 bg-gradient-to-r from-cyan-800/20 via-black/80 to-cyan-900/20 backdrop-blur-md">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-300">Os 3 Pilares do Funil Eterno</h2>
+        <ul class="space-y-10 text-gray-200">
+          <li>
+            <h3 class="text-xl font-semibold text-white">1. Criação de Produtos Lucrativos</h3>
+            <p>Crie produtos de entrada e alto valor para atrair e converter clientes constantemente.</p>
+          </li>
+          <li>
+            <h3 class="text-xl font-semibold text-white">2. Empilhamento e Conexão</h3>
+            <p>Construa, otimize e conecte múltiplos funis que trabalham em sinergia.</p>
+          </li>
+          <li>
+            <h3 class="text-xl font-semibold text-white">3. Automatização e Escala</h3>
+            <p>Automatize processos e escale com tráfego estratégico e equipe enxuta.</p>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <div style="text-align: center;">
-    <button class="btn-voltar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-      Escolher meu produto agora
-    </button>
-  </div>
+    <!-- Depoimentos (Placeholder) -->
+    <section class="py-20 px-6 bg-black/60 backdrop-blur">
+      <h2 class="text-center text-3xl text-cyan-400 font-bold mb-10">Resultados Reais</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 1]</div>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 2]</div>
+        <div class="bg-white/10 p-6 rounded-xl shadow-lg text-gray-300">[Depoimento 3]</div>
+      </div>
+    </section>
 
-</body>
+    <!-- Oferta -->
+    <section id="inscricao" class="py-20 px-6 bg-gradient-to-t from-black via-gray-900 to-black backdrop-blur-sm">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-cyan-400 mb-6">Oferta Exclusiva</h2>
+        <p class="text-lg text-gray-300 mb-4">Método Funil Eterno + Bônus Exclusivos:</p>
+        <ul class="text-left text-gray-200 mb-6 space-y-2">
+          <li>✓ Modelos Secretos de Copy</li>
+          <li>✓ Mapa de Ativação</li>
+          <li>✓ Arsenal Completo do Perpétuo</li>
+          <li>✓ Clube Secreto</li>
+          <li>✓ Plantão Perpétuo</li>
+        </ul>
+        <p class="text-2xl font-bold text-white">De R$8.485,00 por apenas 12x R$103,11 ou R$997 à vista</p>
+        <a href="#" class="mt-6 inline-block px-10 py-4 bg-cyan-500 text-black font-bold rounded-full text-xl hover:bg-cyan-600 transition-all shadow-xl">FAZER MINHA INSCRIÇÃO</a>
+      </div>
+    </section>
+
+    <!-- Mentora -->
+    <section class="py-20 px-6 bg-black/70 backdrop-blur-lg">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Conheça sua Mentora</h2>
+        <p class="text-gray-300 mb-4">Gabi Cervantes é especialista em funis perpétuos e já faturou 8 dígitos online.</p>
+        <p class="text-sm text-gray-400">+30.000 alunos transformados • +500k inscritos no YouTube • +300k seguidores no Instagram</p>
+      </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="py-20 px-6 bg-gradient-to-br from-cyan-700/10 via-black/90 to-cyan-900/10 backdrop-blur">
+      <div class="max-w-4xl mx-auto text-center text-white">
+        <h2 class="text-3xl font-bold text-cyan-400 mb-4">Garantia de 6 Meses</h2>
+        <p>Se você aplicar o método e não tiver resultado, revisamos com você. Se ainda assim não funcionar, devolvemos seu dinheiro + R$1.000 do nosso bolso!</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 text-center text-sm text-gray-500 bg-black/60 backdrop-blur">
+      <p>Política de Privacidade | Termos de Uso</p>
+      <p>© Gabi Cervantes – Todos os Direitos Reservados</p>
+    </footer>
+  </body>
 </html>
-
-
-
-<section class="garantia-horizontal">
-  <div class="imagem">
-    <img src="garantia1.png" alt="Garantia 7 dias" />
-  </div>
-  <div class="texto">
-    <h2>Garantia de 7 dias</h2>
-    <p>
-     Lembrando que todos os nossos produtos tem garantia de 7 dias. Então se você não gostar ou por outro motivo desistir, só entrar em contato, pedir reembolso que eu ou minha equipe devolveremos 100% do seu dinheiro!
-    </p>
-  </div>
-</section>
-
-<style>
-  .garantia-horizontal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-
-  .garantia-horizontal .imagem img {
-    max-width: 200px;
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #d4af37cc;
-    animation: pulse 2.5s infinite;
-  }
-
-  .garantia-horizontal .texto {
-    max-width: 500px;
-  }
-
-  .garantia-horizontal h2 {
-    color: #d4af37;
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-  }
-
-  .garantia-horizontal p {
-    color: #fff;
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-    50% {
-      transform: scale(1.07);
-      box-shadow: 0 0 25px #d4af37ff;
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 15px #d4af37cc;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .garantia-horizontal {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .garantia-horizontal .texto {
-      max-width: 100%;
-    }
-
-    .garantia-horizontal h2 {
-      font-size: 2rem;
-    }
-  }
-</style>
-
-
-<section class="duvidas">
-  <div class="container">
-    <h2>Tire suas dúvidas</h2>
-    <div class="faq">
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="resposta1" id="pergunta1">
-          Como funciona o curso?
-          <span class="seta"></span>
-        </button>
-        <div id="resposta1" class="faq-answer" role="region" aria-labelledby="pergunta1">
-          O curso é 100% online e você pode assistir quando quiser, no seu ritmo. E melhor, é vitalício.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="resposta2" id="pergunta2">
-          Tem suporte?
-          <span class="seta"></span>
-        </button>
-        <div id="resposta2" class="faq-answer" role="region" aria-labelledby="pergunta2">
-          todos nossos conteúdos tem suporte personalizado, inclusive se quiser tirar qualquer dúvida, clique no botão de suporte que tem no canto superior direito da página!
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="resposta3" id="pergunta3">
-          Qual método de pagamento?
-          <span class="seta"></span>
-        </button>
-        <div id="resposta3" class="faq-answer" role="region" aria-labelledby="pergunta3">
-          Todos os métodos de pagamentos possíveis.
-        </div>
-        
-      </div>
-           
-    
-
-    </div>
-
-    <button class="btn-comecar" onclick="document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' })">
-      Escolher meu produto
-    </button>
-  </div>
-</section>
-
-<style>
-  /* Cores douradas e brancas */
-  :root {
-    --dourado: #d4af37;
-    --dourado-escuro: #aa8f1a;
-    --branco: #ffffff;
-  }
-
-  .duvidas {
-    padding: 50px 20px;
-    background: none;
-    color: var(--dourado);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .duvidas .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .duvidas h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--dourado);
-    font-weight: 700;
-    text-shadow: 0 0 5px var(--dourado);
-  }
-
-  .faq-item {
-    border-bottom: 1px solid var(--dourado-escuro);
-    margin-bottom: 15px;
-  }
-
-  .faq-question {
-    background: transparent;
-    border: none;
-    width: 100%;
-    text-align: left;
-    padding: 18px 15px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    position: relative;
-    color: var(--dourado);
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .faq-question:hover {
-    background-color: rgba(212, 175, 55, 0.15);
-    color: var(--branco);
-  }
-
-  .seta {
-    border: solid var(--dourado);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 6px;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-
-  /* Quando aberto, gira a seta */
-  .faq-question[aria-expanded="true"] .seta {
-    transform: rotate(-135deg);
-    border-color: var(--branco);
-  }
-
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    font-size: 1.1rem;
-    color: var(--branco);
-    line-height: 1.5;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-  }
-
-  /* Quando aberto, revela a resposta */
-  .faq-answer.open {
-    max-height: 500px; /* suficiente para a resposta */
-    padding: 15px;
-  }
-
-  /* Botão dourado */
-  .btn-comecar {
-    margin-top: 40px;
-    display: block;
-    background: linear-gradient(45deg, var(--dourado), var(--dourado-escuro));
-    color: var(--branco);
-    border: none;
-    padding: 18px 30px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    border-radius: 40px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 100%;
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.7);
-    text-shadow: 0 0 3px rgba(0,0,0,0.3);
-  }
-
-  .btn-comecar:hover {
-    background: linear-gradient(45deg, var(--dourado-escuro), var(--dourado));
-  }
-
-  @media (max-width: 600px) {
-    .duvidas h2 {
-      font-size: 2rem;
-    }
-
-    .faq-question {
-      font-size: 1.1rem;
-      padding: 15px 12px;
-    }
-
-    .faq-answer {
-      font-size: 1rem;
-    }
-
-    .btn-comecar {
-      font-size: 1.2rem;
-      padding: 15px 25px;
-      max-width: 100%;
-    }
-  }
-</style>
-
-<script>
-  // Script para abrir/fechar as respostas
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const expanded = button.getAttribute('aria-expanded') === 'true';
-      button.setAttribute('aria-expanded', !expanded);
-      const answer = document.getElementById(button.getAttribute('aria-controls'));
-      if (!expanded) {
-        answer.classList.add('open');
-      } else {
-        answer.classList.remove('open');
-      }
-    });
-  });
-</script>
-
-
-
-
-<!-- Botão Flutuante do WhatsApp no CANTO SUPERIOR DIREITO, SEM INTERFERIR NO FUNDO -->
-<a href="https://wa.me/5522992568259" 
-   class="btn-whatsapp" 
-   target="_blank" 
-   aria-label="Fale conosco no WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 256 256">
-    <rect width="256" height="256" fill="none"/>
-    <path d="M128,24A104,104,0,0,0,40.2,176.4l-7.9,28.7a8,8,0,0,0,9.8,9.8l28.7-7.9A104,104,0,1,0,128,24Zm0,192a88,88,0,0,1-44.7-12.1,8,8,0,0,0-4-1.1,8.1,8.1,0,0,0-2.1.3l-22.6,6.2 6.2-22.6a8.1,8.1,0,0,0-.8-6.1A87.8,87.8,0,1,1,128,216Zm45.7-59.6-17.8-7.8a8,8,0,0,0-7.5.6l-9.1,6.1a61.8,61.8,0,0,1-29.5-29.5l6.1-9.1a8.1,8.1,0,0,0,.6-7.5l-7.8-17.8a8,8,0,0,0-10.2-4.2l-12.2,4.9a8,8,0,0,0-5,6.7c-1.1,10.6,1.5,29.3,27.4,55.2s44.6,28.5,55.2,27.4a8,8,0,0,0,6.7-5l4.9-12.2A8,8,0,0,0,173.7,156.4Z"/>
-  </svg>
-</a>
-
-<style>
-  .btn-whatsapp {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    background-color: #25D366;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-  }
-
-  .btn-whatsapp:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
-  }
-
-  .btn-whatsapp svg {
-    width: 28px;
-    height: 28px;
-    fill: #000;
-  }
-
-  @media (max-width: 600px) {
-    .btn-whatsapp {
-      width: 50px;
-      height: 50px;
-      top: 15px;
-      right: 15px;
-    }
-
-    .btn-whatsapp svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-</style>
-
-
-
-<footer class="rodape-transparente">
-  <p>&copy; 2025 Thurzin Trader. Todos os direitos reservados.</p>
-</footer>
-
-<style>
-  .rodape-transparente {
-    background: transparent; /* sem fundo */
-    color: #FFD700; /* texto dourado */
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  @media (max-width: 600px) {
-    .rodape-transparente {
-      font-size: 0.85rem;
-    }
-  }
-</style>
-
-
-
-
