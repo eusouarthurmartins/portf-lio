@@ -50,29 +50,32 @@
       </div>
     </section>
 
-    <!-- Pilares -->
+    <!-- Adicione isso no <head> do seu HTML -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Pilares -->
 <section class="py-20 px-6 bg-gradient-to-r from-cyan-800/20 via-black/80 to-cyan-900/20 backdrop-blur-md">
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-4xl font-bold text-cyan-300 mb-16">Os 3 Pilares do Trader Inteligente</h2>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
       
       <!-- Pilar 1 -->
-      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300" data-aos="fade-up" data-aos-delay="100">
         <div class="text-4xl mb-4">📈</div>
         <h3 class="text-xl font-bold mb-2">1. Estratégias Lucrativas</h3>
         <p class="text-gray-300">Aprenda a identificar os melhores momentos do mercado e entrar com confiança, usando estratégias testadas que funcionam no dia a dia.</p>
       </div>
 
       <!-- Pilar 2 -->
-      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300" data-aos="fade-up" data-aos-delay="200">
         <div class="text-4xl mb-4">🔗</div>
         <h3 class="text-xl font-bold mb-2">2. Conexão de Operações e Contexto</h3>
         <p class="text-gray-300">Aprenda a ligar os pontos do mercado, interpretando o contexto das velas, padrões e indicadores para tomar decisões consistentes.</p>
       </div>
 
       <!-- Pilar 3 -->
-      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300">
+      <div class="bg-black/60 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300" data-aos="fade-up" data-aos-delay="300">
         <div class="text-4xl mb-4">🚀</div>
         <h3 class="text-xl font-bold mb-2">3. Escalada Inteligente</h3>
         <p class="text-gray-300">Use o poder da análise estratégica para operar menos e lucrar mais, aproveitando o que o mercado te dá de melhor, no momento certo.</p>
@@ -81,6 +84,15 @@
     </div>
   </div>
 </section>
+
+<!-- Adicione isso antes do fechamento do </body> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
 
 
     <!-- Depoimentos -->
